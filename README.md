@@ -3,11 +3,7 @@
 to align the header title to the center
 <h2 align="center">by: Julia Pak</h2>
 -->
-<<<<<<< HEAD
-<p align="center"><img alt="app icon" src="https://user-images.githubusercontent.com/41366455/194013118-6963579f-cc91-43c8-9b8a-877d0e52f19e.png" width="250"><br><sup><em>App icon</sup></em></p>
-=======
 <p align="center"><img alt="app icon" src="https://user-images.githubusercontent.com/41366455/190889699-ad026341-0248-4212-ac50-9130e804e191.jpg" width="250"><br><sup><em>Coffee Society App icon</sup></em></p>
->>>>>>> eb51c43 (read)
 
 <h1 align="center">$\textcolor{#FF0978}{\Huge\texttt{About this app}}$</h1>
 
