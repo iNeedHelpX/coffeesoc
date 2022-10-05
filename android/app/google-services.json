@@ -1,0 +1,96 @@
+{
+  "project_info": {
+    "project_number": "864100529634",
+    "project_id": "getxshop-dce91",
+    "storage_bucket": "getxshop-dce91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864100529634:android:8dad40c1e4b1dd2b71f5bb",
+        "android_client_info": {
+          "package_name": "com.juliapak.coffeesoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864100529634-o3sp7g87blvliaind1raaj40itll2hs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5R5oz4NfjYY3OGbkdzJ2fhdfQ1A0Cdjw"
+        },
+        {
+          "current_key": "AIzaSyB2HZzIlkQZ1Wp84ge8CmceS6E6nPrPyNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864100529634-o3sp7g87blvliaind1raaj40itll2hs2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "864100529634-180j87n6e5mus24cnp8v9lj42kvg6464.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.juliapak.coffeesoc"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864100529634:android:6f8ecb8b22b891f671f5bb",
+        "android_client_info": {
+          "package_name": "com.juliapak.getxshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864100529634-marklpe4ker54ak5o40q8ijhjjio8uqi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juliapak.getxshop",
+            "certificate_hash": "e73ddc00145166cf8a774d2a90693bdfeafbb70c"
+          }
+        },
+        {
+          "client_id": "864100529634-o3sp7g87blvliaind1raaj40itll2hs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5R5oz4NfjYY3OGbkdzJ2fhdfQ1A0Cdjw"
+        },
+        {
+          "current_key": "AIzaSyB2HZzIlkQZ1Wp84ge8CmceS6E6nPrPyNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864100529634-o3sp7g87blvliaind1raaj40itll2hs2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "864100529634-180j87n6e5mus24cnp8v9lj42kvg6464.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.juliapak.coffeesoc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
