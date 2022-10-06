@@ -10,19 +10,22 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: containerback,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Stack(
         children: [
-          Image.asset(
-            logo,
-            width: 120,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                logo,
+                width: 120,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Loading()
+            ],
           ),
-          SizedBox(
-            height: 10,
-          ),
-          Loading()
         ],
       ),
     );
