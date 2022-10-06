@@ -16,14 +16,15 @@ class SplashScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                logo,
-                width: 120,
-              ),
+              // Image.asset(
+              //   logo,
+              //   width: 120,
+              // ),
               SizedBox(
                 height: 10,
               ),
-              Loading()
+              Lottie.network(
+                  'https://assets1.lottiefiles.com/temp/lf20_yGoGWr.json')
             ],
           ),
         ],

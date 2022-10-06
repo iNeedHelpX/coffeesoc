@@ -9,6 +9,6 @@ class Loading extends StatelessWidget {
     return Container(
         color: Colors.blue,
         child: Lottie.network(
-            'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'));
+            'https://assets1.lottiefiles.com/temp/lf20_yGoGWr.json'));
   }
 }
