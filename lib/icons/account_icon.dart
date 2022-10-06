@@ -6,8 +6,8 @@ class AccIcn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 40,
-        width: 40,
+        height: 35,
+        width: 35,
         child: Image.asset(
           'assets/icons/settings.png',
           height: 25,

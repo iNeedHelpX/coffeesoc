@@ -1,32 +1,36 @@
 import 'package:coffeesoc/colors/colours_list.dart';
-import 'package:coffeesoc/start/assets_path.dart';
-import 'package:coffeesoc/start/loading.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:lottie/lottie.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 3));
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: lightgreen,
-      body: Stack(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Image.asset(
-              //   logo,
-              //   width: 120,
-              // ),
-              SizedBox(
-                height: 10,
-              ),
-              Loading()
-            ],
-          ),
-        ],
+      body: Container(
+        alignment: Alignment.center,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 300,
+              width: 300,
+              child: Lottie.asset('assets/19702-frappe-coffee.json'),
+            )
+          ],
+        ),
       ),
     );
   }

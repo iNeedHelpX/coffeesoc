@@ -15,7 +15,7 @@ class AppSetup extends StatefulWidget {
 }
 
 class AppSetupState extends State<AppSetup> {
-  int selectedpage = 0;
+  int selectedpage = 1;
 
   final _pageOptions = [
 //pages
@@ -28,7 +28,7 @@ class AppSetupState extends State<AppSetup> {
     return CurvedNavigationBar(
       index: selectedpage,
       buttonBackgroundColor: containerback,
-      color: barback.withOpacity(0.8),
+      color: barback.withOpacity(0.7),
       backgroundColor: Colors.transparent,
       animationCurve: Curves.linearToEaseOut,
       items: listBarIcons(),

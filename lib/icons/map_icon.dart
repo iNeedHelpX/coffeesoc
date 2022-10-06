@@ -6,11 +6,11 @@ class MapIcn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 40,
-        width: 40,
+        height: 35,
+        width: 35,
         child: Image.asset(
           'assets/icons/map.png',
-          height: 25,
+          height: 24,
         ));
   }
 }
