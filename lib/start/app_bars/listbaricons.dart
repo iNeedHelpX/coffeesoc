@@ -7,6 +7,7 @@ import 'package:coffeesoc/icons/panda_icon.dart';
 List<Widget> listBarIcons() {
   return const <Widget>[
     //icons list here
+    PandaIcn(),
     CupIcon(),
     MapIcn(),
     AccIcn(),

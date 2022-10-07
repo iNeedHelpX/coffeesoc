@@ -1,3 +1,4 @@
+import 'package:coffeesoc/pages/panda_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:coffeesoc/colors/colours_list.dart';
@@ -19,6 +20,7 @@ class AppSetupState extends State<AppSetup> {
 
   final _pageOptions = [
 //pages
+    PandaPage(),
     HomePage(),
     MapPage(),
     AccountPage(),
