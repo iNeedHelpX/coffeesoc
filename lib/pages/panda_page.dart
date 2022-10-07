@@ -1,3 +1,4 @@
+import 'package:coffeesoc/pages/widgets/neurobox.dart';
 import 'package:flutter/material.dart';
 
 class PandaPage extends StatefulWidget {
@@ -10,6 +11,22 @@ class PandaPage extends StatefulWidget {
 class _PandaPageState extends State<PandaPage> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView();
+    return SingleChildScrollView(
+      child: Stack(children: [
+        SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              NeuromorphicBox(
+                boomtitle: 'Welcome to the services section',
+                subtext:
+                    'Here you will find cool services provided by local people',
+              ),
+            ],
+          ),
+        ),
+      ]),
+    );
   }
 }

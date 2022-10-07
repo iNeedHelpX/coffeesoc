@@ -7,6 +7,7 @@ import 'package:coffeesoc/pages/home_page.dart';
 import 'package:coffeesoc/pages/map_page.dart';
 import 'package:coffeesoc/start/app_bars/listbaricons.dart';
 import 'package:coffeesoc/start/app_bars/radialbar.dart';
+import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 
 class AppSetup extends StatefulWidget {
   const AppSetup({Key? key}) : super(key: key);
@@ -45,13 +46,20 @@ class AppSetupState extends State<AppSetup> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: lightgoldbg,
-      extendBodyBehindAppBar: true,
-      appBar: myRadialBar(context),
-      body: _pageOptions[selectedpage],
-      extendBody: true,
-      bottomNavigationBar: curvedNavBar(),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: FlutterGradients.confidentCloud(
+          type: GradientType.linear,
+          tileMode: TileMode.values[0],
+        ),
+      ),
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: myRadialBar(context),
+        body: _pageOptions[selectedpage],
+        extendBody: true,
+        bottomNavigationBar: curvedNavBar(),
+      ),
     );
   }
 }
