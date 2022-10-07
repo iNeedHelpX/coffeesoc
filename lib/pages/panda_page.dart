@@ -19,7 +19,7 @@ class _PandaPageState extends State<PandaPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               NeuromorphicBox(
-                boomtitle: 'Welcome to the services section',
+                boomtitle: 'Services Section',
                 subtext:
                     'Here you will find cool services provided by local people',
               ),
