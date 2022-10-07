@@ -55,6 +55,7 @@ dependencies:
   uuid: ^3.0.6
   overlay_support: ^2.0.1
   google_sign_in: ^5.4.2
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:
