@@ -7,12 +7,14 @@ class UserModel {
   static const EMAIL = "email";
   static const CART = "cart";
   static const PHOTOURL = "photoURL";
+  static const REVIEWS = "reviews";
 
   String? id;
   String? name;
   String? email;
   String? photoURL;
   List<CartItemModel>? cart;
+  List<CartItemModel>? reviews;
 
   UserModel({
     this.id,
@@ -20,6 +22,7 @@ class UserModel {
     this.email,
     this.name,
     this.cart,
+    this.reviews,
   });
 
   UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> snapshot) {
@@ -47,6 +50,7 @@ class UserModel {
         "email": email,
         "name": name,
         "photoUrl": photoURL,
-        "cart": cart
+        "cart": cart,
+        "reviews": reviews,
       };
 }
