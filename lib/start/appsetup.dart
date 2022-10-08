@@ -50,7 +50,7 @@ class AppSetupState extends State<AppSetup> {
       decoration: BoxDecoration(
         gradient: FlutterGradients.confidentCloud(
           type: GradientType.linear,
-          tileMode: TileMode.values[0],
+          tileMode: TileMode.clamp,
         ),
       ),
       child: Scaffold(
