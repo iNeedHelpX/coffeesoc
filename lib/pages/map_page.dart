@@ -13,7 +13,13 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Stack(
-      children: [],
+      children: [
+        SafeArea(
+          child: GoogleMap(
+            initialCameraPosition: CameraPosition(target: , zoom: 14.5),
+          ),
+        ),
+      ],
     ));
   }
 }
