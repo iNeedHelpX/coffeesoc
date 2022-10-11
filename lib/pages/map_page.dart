@@ -1,5 +1,9 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:geolocator/geolocator.dart';
+import 'dart:ui';
+
 
 class MapPage extends StatefulWidget {
   const MapPage({super.key});
@@ -14,6 +18,7 @@ class MapPage extends StatefulWidget {
 //lat lng southeast
 //43.632439, -79.191675
 class _MapPageState extends State<MapPage> {
+  Completer<GoogleMapController> _controller = Completer();
   static const TOBOUNDS = {
     "north": -79.5162897,
   "south": -79.191675,
@@ -21,6 +26,7 @@ class _MapPageState extends State<MapPage> {
  " east": 43.632439,
   };
 
+  // static LatLng _initialPosition;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
