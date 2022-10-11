@@ -8,7 +8,19 @@ class MapPage extends StatefulWidget {
   State<MapPage> createState() => _MapPageState();
 }
 
+//latlng northwest
+//43.780326,-79.5162897
+
+//lat lng southeast
+//43.632439, -79.191675
 class _MapPageState extends State<MapPage> {
+  static const TOBOUNDS = {
+    "north": -79.5162897,
+  "south": -79.191675,
+ " west": 43.780326,
+ " east": 43.632439,
+  };
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -16,6 +28,7 @@ class _MapPageState extends State<MapPage> {
       children: [
         SafeArea(
           child: GoogleMap(
+            minMaxZoomPreference: MinMaxZoomPreference(14, 17),
             initialCameraPosition: CameraPosition(target: , zoom: 14.5),
           ),
         ),
