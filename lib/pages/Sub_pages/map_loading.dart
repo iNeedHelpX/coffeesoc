@@ -13,7 +13,8 @@ class LoadScreen extends StatelessWidget {
       child: Center(
         child: Text(
           'Loading map, please wait..',
-          style: GoogleFonts.dancingScript(fontSize: 24, color: brightpink),
+          style: GoogleFonts.dancingScript(
+              fontSize: 24, fontWeight: FontWeight.w500, color: brightpink),
         ),
       ),
     );
