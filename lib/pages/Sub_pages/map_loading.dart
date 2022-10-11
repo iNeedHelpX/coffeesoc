@@ -14,7 +14,7 @@ class LoadScreen extends StatelessWidget {
         child: Text(
           'Loading map, please wait..',
           style: GoogleFonts.dancingScript(
-              fontSize: 24, fontWeight: FontWeight.w500, color: brightpink),
+              fontSize: 26, fontWeight: FontWeight.w500, color: brightpink),
         ),
       ),
     );
