@@ -20,6 +20,7 @@ class _MapPageState extends State<MapPage> {
   void initState() {
     super.initState();
     //get usr location
+    _getUserLocation();
   }
 
   void getUserLocation() => _getUserLocation();
