@@ -34,7 +34,7 @@ class _MapPageState extends State<MapPage> {
       children: [
         SafeArea(
           child: GoogleMap(
-            minMaxZoomPreference: MinMaxZoomPreference(14, 17),
+            minMaxZoomPreference: MinMaxZoomPreference(13, 17),
             initialCameraPosition: CameraPosition(target: , zoom: 14.5),
           ),
         ),
