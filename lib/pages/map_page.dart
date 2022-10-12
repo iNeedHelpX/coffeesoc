@@ -26,6 +26,8 @@ class _MapPageState extends State<MapPage> {
               minMaxZoomPreference: MinMaxZoomPreference(13, 17),
               initialCameraPosition: CameraPosition(
                   target: LatLng(43.6500418, -79.3916043), zoom: 14.5),
+
+              //this sets the scroll limit so that there is no excessive API usage from scroll off
               cameraTargetBounds: CameraTargetBounds(
                 LatLngBounds(
                   northeast: LatLng(43.7970928, -79.3067414),
