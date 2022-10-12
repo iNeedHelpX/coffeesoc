@@ -12,20 +12,14 @@ class MapPage extends StatefulWidget {
   State<MapPage> createState() => _MapPageState();
 }
 
-//latlng northwest
-//43.780326,-79.5162897
-
-//lat lng southeast
-//43.632439, -79.191675
 class _MapPageState extends State<MapPage> {
   Completer<GoogleMapController> _googlemapController = Completer();
-  static const tobounds = {
-    "north": -79.5162897,
-  "south": -79.191675,
- " west": 43.780326,
- " east": 43.632439,
-  };
-
+  static const tobounds =[
+    //northwest
+    [43.780326,-79.5162897],
+    //southeast
+    [43.632439, -79.191675]
+  ];
   // static LatLng _initialPosition;
   @override
   Widget build(BuildContext context) {
