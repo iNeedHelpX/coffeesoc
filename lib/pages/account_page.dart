@@ -1,3 +1,5 @@
+import 'package:coffeesoc/colors/colours_list.dart';
+import 'package:coffeesoc/globalvars.dart';
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatefulWidget {
@@ -10,6 +12,29 @@ class AccountPage extends StatefulWidget {
 class _AccountPageState extends State<AccountPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SingleChildScrollView(
+      child: Stack(
+        children: [
+          SafeArea(
+            child: Column(
+              children: [
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurpleAccent, // background
+                    foregroundColor: gold,
+                    // foreground
+                  ),
+                  onPressed: () {
+                    loginController.signOut();
+                    // authController.signOut();
+                  },
+                  child: Text('Logout'),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
