@@ -23,9 +23,9 @@ class _MapPageState extends State<MapPage> {
           // you must wrap the map within a container or else it will say something about render box not being laid out and this: Another exception was thrown: RenderUiKitView object was given an infinite size during layout.
           Container(
             child: GoogleMap(
-              minMaxZoomPreference: MinMaxZoomPreference(13, 17),
+              minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
               initialCameraPosition: CameraPosition(
-                  target: LatLng(43.6500418, -79.3916043), zoom: 15.5),
+                  target: LatLng(43.6500418, -79.3916043), zoom: 16),
 
               //this sets the scroll limit so that there is no excessive API usage from scroll off
               cameraTargetBounds: CameraTargetBounds(
