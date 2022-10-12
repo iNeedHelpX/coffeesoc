@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'dart:ui';
@@ -14,6 +15,25 @@ class MapPage extends StatefulWidget {
 
 class _MapPageState extends State<MapPage> {
   Completer<GoogleMapController> _googlemapController = Completer();
+  static LatLng? _initialPosition;
+  @override
+  void initState() {
+    super.initState();
+    //get usr location
+  }
+
+  void getUserLocation() => _getUserLocation();
+  //get usr location
+  void _getUserLocation() async {
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+    List<Placemark> placemark = await Geolocator()
+        .placemarkFromCoordinates(position.latitude, position.longitude);
+    setState(() {
+      _initialPosition = LatLng(position.latitude, position.longitude);
+      print('${placemark[0].name}');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
