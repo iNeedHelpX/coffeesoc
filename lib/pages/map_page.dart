@@ -20,6 +20,7 @@ class _MapPageState extends State<MapPage> {
     return Scaffold(
       body: Stack(
         children: [
+          // you must wrap the map within a container or else it will say something about render box not being laid out and this: Another exception was thrown: RenderUiKitView object was given an infinite size during layout.
           Container(
             child: GoogleMap(
               minMaxZoomPreference: MinMaxZoomPreference(13, 17),
