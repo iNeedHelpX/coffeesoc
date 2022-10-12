@@ -18,8 +18,8 @@ class MapPage extends StatefulWidget {
 //lat lng southeast
 //43.632439, -79.191675
 class _MapPageState extends State<MapPage> {
-  Completer<GoogleMapController> _controller = Completer();
-  static const TOBOUNDS = {
+  Completer<GoogleMapController> _googlemapController = Completer();
+  static const tobounds = {
     "north": -79.5162897,
   "south": -79.191675,
  " west": 43.780326,
