@@ -46,7 +46,7 @@ class _MapPageState extends State<MapPage> {
             child: GoogleMap(
               minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
               initialCameraPosition: CameraPosition(
-                  target: LatLng(43.6500418, -79.3916043), zoom: 16),
+                  target: LatLng(43.652468, -79.401701), zoom: 16),
 
               //this sets the scroll limit so that there is no excessive API usage from scroll off
               cameraTargetBounds: CameraTargetBounds(
