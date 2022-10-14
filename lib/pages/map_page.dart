@@ -1,12 +1,8 @@
 import 'dart:async';
-import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:get/get_connect/connect.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
-import 'dart:ui';
 
 //this is the page that shows the google map
 class MapPage extends StatefulWidget {

@@ -10,8 +10,8 @@ final Future<FirebaseApp> initialization = Firebase.initializeApp();
 FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 FirebaseAuth auth = FirebaseAuth.instance;
 
-//controller
+//controllers in use
 LoginController loginController = LoginController.instance;
-LocationController locationController = LocationController.instance;
+
 //other variables
 Logger logger = Logger();

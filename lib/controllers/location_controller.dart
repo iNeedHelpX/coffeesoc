@@ -6,22 +6,19 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 //controller for location
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
+  LatLng? currentLatLng;
+  Completer<GoogleMapController> _googlemapController = Completer();
+  var geolocator = Geolocator;
 
-  var lat = "getting latitude..".obs;
-  var lon = "getting longitude..".obs;
-  var address = "getting address..".obs;
-  late StreamSubscription<Position> streamSubscription;
-
-  @override
   void onReady() {
     super.onReady();
     getLocationPermission();
+    getMyLocation();
   }
 
   @override
   void onClose() {
     //don't forget to close
-    streamSubscription.cancel();
   }
 
   getLocationPermission() async {
@@ -51,7 +48,6 @@ class LocationController extends GetxController {
 
   getMyLocation() {
     Geolocator.getCurrentPosition().then((currLocation) {
-      LatLng currentLatLng;
       currentLatLng = new LatLng(currLocation.latitude, currLocation.longitude);
     });
   }
