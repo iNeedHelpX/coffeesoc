@@ -6,18 +6,13 @@ import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  // final AuthController authController = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: FlutterGradients.confidentCloud(
-          type: GradientType.linear,
-          tileMode: TileMode.clamp,
-        ),
-      ),
-      child: Stack(
+    return Scaffold(
+      backgroundColor: medpink,
+      body: Stack(
         children: [
           Center(
             child: Column(
@@ -25,7 +20,7 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
+                  padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                   child: Container(
                     padding: EdgeInsets.fromLTRB(15, 20, 15, 5),
                     decoration: BoxDecoration(
@@ -39,23 +34,21 @@ class LoginPage extends StatelessWidget {
                           "No need to register. Just sign in with Google!",
                           //style info next
                           style: GoogleFonts.fjallaOne(
-                            color: textgreyblue,
+                            color: brighty,
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
                         //buffer space
-                        const SizedBox(
+                        SizedBox(
                           height: 20,
                         ),
                         SignInButton(
-                          elevation: 4,
-                          text: "Sign in with Google",
-                          padding: EdgeInsets.all(1),
-                          Buttons.GoogleDark,
+                          Buttons.Google,
                           onPressed: () {
-                            //sign in logic goes here
                             loginController.googleLogin();
+                            //sign in logic goes here
+                            // authController.googleLogin(context);
                           },
                         )
                       ],
