@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
@@ -11,6 +12,6 @@ FirebaseAuth auth = FirebaseAuth.instance;
 
 //controller
 LoginController loginController = LoginController.instance;
-
+LocationController locationController = LocationController.instance;
 //other variables
 Logger logger = Logger();
