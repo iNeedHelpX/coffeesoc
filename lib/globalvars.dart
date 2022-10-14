@@ -12,6 +12,6 @@ FirebaseAuth auth = FirebaseAuth.instance;
 
 //controllers in use
 LoginController loginController = LoginController.instance;
-
+LocationController locationController = LocationController.instance;
 //other variables
 Logger logger = Logger();

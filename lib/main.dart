@@ -12,6 +12,7 @@ Future<void> main() async {
 //place controller access in here
     Get.put(LoginController());
     Get.put(CartController());
+    Get.put(LocationController());
   });
   runApp(Start());
 }
