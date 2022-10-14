@@ -44,6 +44,7 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
+    //position stream here
     streamSubscription =
         Geolocator.getPositionStream().listen((Position position) {});
   }
