@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
+import 'package:get/get_connect/connect.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'dart:ui';
@@ -44,9 +45,10 @@ class _MapPageState extends State<MapPage> {
           // you must wrap the map within a container or else it will say something about render box not being laid out and this: Another exception was thrown: RenderUiKitView object was given an infinite size during layout.
           Container(
             child: GoogleMap(
-              minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
               initialCameraPosition: CameraPosition(
                   target: LatLng(43.652468, -79.401701), zoom: 16),
+              minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
+              zoomGesturesEnabled: true,
 
               //this sets the scroll limit so that there is no excessive API usage from scroll off
               cameraTargetBounds: CameraTargetBounds(
