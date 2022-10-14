@@ -49,8 +49,10 @@ class LocationController extends GetxController {
     //position stream?
   }
 
-  getMyLocation() async {
-    return await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+  getMyLocation() {
+    Geolocator.getCurrentPosition().then((currLocation) {
+      LatLng currentLatLng;
+      currentLatLng = new LatLng(currLocation.latitude, currLocation.longitude);
+    });
   }
 }
