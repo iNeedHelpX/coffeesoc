@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 //controller for location
 class LocationController extends GetxController {
@@ -14,7 +15,7 @@ class LocationController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    getlocation();
+    getLocationPermission();
   }
 
   @override
@@ -23,7 +24,7 @@ class LocationController extends GetxController {
     streamSubscription.cancel();
   }
 
-  getlocation() async {
+  getLocationPermission() async {
     bool serviceEnabled;
     LocationPermission permission;
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
@@ -43,7 +44,13 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
-    Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    return Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
     //position stream?
+  }
+
+  getMyLocation() async {
+    return await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
   }
 }

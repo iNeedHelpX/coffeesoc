@@ -30,7 +30,9 @@ class _MapPageState extends State<MapPage> {
           Container(
             child: GoogleMap(
               initialCameraPosition: CameraPosition(
-                  target: locationController.getlocation(), zoom: 16),
+                  //get user location
+                  target: locationController.getMyLocation(),
+                  zoom: 16),
               minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
               zoomGesturesEnabled: true,
 
