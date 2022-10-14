@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:coffeesoc/globalvars.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:get/get_connect/connect.dart';
@@ -16,26 +17,9 @@ class MapPage extends StatefulWidget {
 
 class _MapPageState extends State<MapPage> {
   Completer<GoogleMapController> _googlemapController = Completer();
-  static LatLng? _initialPosition;
-  @override
-  void initState() {
-    super.initState();
-    //get usr location
-    _getUserLocation();
-  }
 
   // void getUserLocation() => _getUserLocation();
   //get usr location
-  void _getUserLocation() async {
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
-    List<Placemark> placemark = await Geolocator()
-        .placemarkFromCoordinates(position.latitude, position.longitude);
-    setState(() {
-      _initialPosition = LatLng(position.latitude, position.longitude);
-      print('${placemark[0].name}');
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +30,7 @@ class _MapPageState extends State<MapPage> {
           Container(
             child: GoogleMap(
               initialCameraPosition: CameraPosition(
-                  target: LatLng(43.652468, -79.401701), zoom: 16),
+                  target: locationController.getlocation(), zoom: 16),
               minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
               zoomGesturesEnabled: true,
 

@@ -12,19 +12,15 @@ class LocationController extends GetxController {
   late StreamSubscription<Position> streamSubscription;
 
   @override
-  void onInit() async {
-    super.onInit();
-    getlocation();
-  }
-
-  @override
   void onReady() {
     super.onReady();
+    getlocation();
   }
 
   @override
   void onClose() {
     //don't forget to close
+    streamSubscription.cancel();
   }
 
   getlocation() async {

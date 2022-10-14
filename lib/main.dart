@@ -1,3 +1,4 @@
+import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:coffeesoc/controllers/cart_controller.dart';
@@ -11,6 +12,7 @@ Future<void> main() async {
 //place controller access in here
     Get.put(LoginController());
     Get.put(CartController());
+    Get.put(LocationController());
   });
   runApp(Start());
 }
