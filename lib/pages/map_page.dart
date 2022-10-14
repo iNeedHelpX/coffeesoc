@@ -1,9 +1,6 @@
-import 'dart:async';
 import 'package:coffeesoc/globalvars.dart';
-import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
 
 //this is the page that shows the google map
 class MapPage extends StatefulWidget {
@@ -14,23 +11,7 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
-  // LatLng? currentLatLng;
-  // Completer<GoogleMapController> _googlemapController = Completer();
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   Geolocator.getCurrentPosition().then((currLocation) {
-  //     setState(() {
-  //       currentLatLng =
-  //           new LatLng(currLocation.latitude, currLocation.longitude);
-  //     });
-  //   });
-  // }
-
-  // void getUserLocation() => _getUserLocation();
-  //get usr location
-
+  late bool isLoading;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +23,8 @@ class _MapPageState extends State<MapPage> {
             child: GoogleMap(
               initialCameraPosition: CameraPosition(
                   //get user location
-                  target: LatLng(locationController.myLocation.latitude,
-                      locationController.myLocation.longitude),
+                  target: LatLng(locationController.myLocation!.latitude,
+                      locationController.myLocation!.longitude),
                   zoom: 16),
               minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
               zoomGesturesEnabled: true,

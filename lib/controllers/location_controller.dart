@@ -6,7 +6,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 //controller for location, not currently in use
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
-  late Position myLocation;
+  late Position? myLocation;
 
   @override
   void onInit() {
@@ -34,8 +34,10 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
+
     myLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
+
     //position stream?
   }
 }
