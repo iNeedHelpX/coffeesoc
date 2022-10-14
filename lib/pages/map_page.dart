@@ -24,7 +24,7 @@ class _MapPageState extends State<MapPage> {
     _getUserLocation();
   }
 
-  void getUserLocation() => _getUserLocation();
+  // void getUserLocation() => _getUserLocation();
   //get usr location
   void _getUserLocation() async {
     Position position = await Geolocator.getCurrentPosition(
