@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
@@ -27,5 +26,6 @@ class LocationController extends GetxController {
 
   getlocation() async {
     bool serviceEnabled;
+    LocationPermission permission;
   }
 }
