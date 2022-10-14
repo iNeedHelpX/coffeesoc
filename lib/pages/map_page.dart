@@ -1,5 +1,6 @@
 import 'package:coffeesoc/globalvars.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 //this is the page that shows the google map
@@ -21,6 +22,8 @@ class _MapPageState extends State<MapPage> {
 
           Container(
             child: GoogleMap(
+              myLocationEnabled: true,
+              myLocationButtonEnabled: false,
               initialCameraPosition: CameraPosition(
                   //get user location
                   target: LatLng(locationController.myLocation!.latitude,
