@@ -10,6 +10,7 @@ class LocationController extends GetxController {
   var lon = "getting longitude..".obs;
   var address = "getting address..".obs;
   late StreamSubscription<Position> streamSubscription;
+
   @override
   void onInit() async {
     super.onInit();
@@ -22,7 +23,9 @@ class LocationController extends GetxController {
   }
 
   @override
-  void onClose() {}
+  void onClose() {
+    //don't forget to close
+  }
 
   getlocation() async {
     bool serviceEnabled;
@@ -44,8 +47,7 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
-    //position stream here
-    streamSubscription =
-        Geolocator.getPositionStream().listen((Position position) {});
+    Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    //position stream?
   }
 }
