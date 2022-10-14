@@ -16,7 +16,7 @@ class LoginController extends GetxController {
   RxBool isLoggedIn = false.obs;
   Rx<UserModel> userModel = UserModel().obs;
   String usersCollection = "coffeeusers";
-//  Rx<UserModel> usrModel = UserModel().obs;
+  // Rx<UserModel> usrModel = UserModel().obs;
 
   GoogleSignInAccount? _googleAcc;
   UserModel? _userModel;
@@ -34,11 +34,11 @@ class LoginController extends GetxController {
   setInitialScreen(User? user) {
     if (user == null) {
       print("going to login page...");
-      Get.offAll(() => const LoginPage());
+      Get.offAll(() => LoginPage());
     } else {
       print("The user is ${user.displayName}");
       userModel.bindStream(listenToUser());
-      Get.offAll(() => const AppSetup());
+      Get.offAll(() => AppSetup());
     }
   }
 
@@ -55,26 +55,38 @@ class LoginController extends GetxController {
     );
     try {
       await auth.signInWithCredential(cred).then((res) async {
-        if (kDebugMode) {
-          print('Signed in successfully as ${res.user!.displayName}');
-          print('email: ${res.user!.email}');
-          print('email: ${res.user!.displayName}');
-        }
-
-        UserModel newUser = UserModel(
+        print('Signed in successfully as ' + res.user!.displayName.toString());
+        print('email: ' + res.user!.email.toString());
+        UserModel _newUser = UserModel(
           id: res.user!.uid,
           email: res.user!.email!,
           name: res.user!.displayName,
           photoURL: res.user!.photoURL,
           cart: [],
         );
-        _addUserToFB(newUser, res.user!);
+        _addUserToFB(_newUser, res.user!);
       });
     } catch (e) {
       debugPrint(e.toString());
       Get.snackbar("Sign In Failed", "Try again");
     }
   }
+
+  // void signUp() async {
+  //   try {
+  //     await auth
+  //         .createUserWithEmailAndPassword(
+  //             email: email.text.trim(), password: password.text.trim())
+  //         .then((result) {
+  //       String _userId = result.user.uid;
+  //       _addUserToFirestore(_userId);
+  //       _clearControllers();
+  //     });
+  //   } catch (e) {
+  //     debugPrint(e.toString());
+  //     Get.snackbar("Sign In Failed", "Try again");
+  //   }
+  // }
 
   void signOut() async {
     googleSignIn.signOut();
@@ -93,12 +105,12 @@ class LoginController extends GetxController {
 
   Stream<UserModel> listenToUser() => firebaseFirestore
       .collection(usersCollection)
-      .doc(fbUser.value?.uid)
+      .doc(fbUser.value!.uid)
       .snapshots()
       .map((snapshot) => UserModel.fromSnapshot(snapshot));
 
   _addUserToFB(UserModel usr, User firebaseUser) {
-    firebaseFirestore.collection(usersCollection).doc().set({
+    firebaseFirestore.collection(usersCollection).doc(usr.id).set({
       "displayName": usr.name,
       "id": usr.id,
       "photoURL": usr.photoURL,
