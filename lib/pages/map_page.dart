@@ -17,6 +17,7 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //this here doesn't work?
       body: locationController.myLocation == false
           ? LoadScreen()
           : Stack(
