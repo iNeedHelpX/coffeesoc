@@ -14,10 +14,12 @@ class _AccountPageState extends State<AccountPage> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Stack(
-        alignment: Alignment.center,
         children: [
           SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 //logout button
                 ElevatedButton(
