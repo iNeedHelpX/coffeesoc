@@ -16,14 +16,12 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //this here doesn't work?
-      body: Stack(
-        children: [
-          // you must wrap the map within a container or else it will say something about render box not being laid out and this: Another exception was thrown: RenderUiKitView object was given an infinite size during layout.
+      body: SafeArea(
+        child: Stack(
+          children: [
+            // you must wrap the map within a container or else it will say something about render box not being laid out and this: Another exception was thrown: RenderUiKitView object was given an infinite size during layout.
 
-          Container(
-            height: 400,
-            width: 400,
-            child: GoogleMap(
+            GoogleMap(
               myLocationEnabled: true,
               myLocationButtonEnabled: false,
               initialCameraPosition: CameraPosition(
@@ -42,8 +40,8 @@ class _MapPageState extends State<MapPage> {
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
