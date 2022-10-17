@@ -39,4 +39,7 @@ class LocationController extends GetxController {
 
     //position stream?
   }
+
+  //custom icons
+  void getCustomIcon() {}
 }
