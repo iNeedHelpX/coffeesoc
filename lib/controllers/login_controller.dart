@@ -21,6 +21,13 @@ class LoginController extends GetxController {
   GoogleSignInAccount? _googleAcc;
   UserModel? _userModel;
 
+//for initialization
+  @override
+  void onInit() {
+    super.onInit();
+    _getUpdate();
+  }
+
   @override
   void onReady() {
     super.onReady();
@@ -119,3 +126,5 @@ class LoginController extends GetxController {
     });
   }
 }
+
+void _getUpdate() {}
