@@ -1,14 +1,9 @@
 import 'package:coffeesoc/pages/widgets/neurobox.dart';
 import 'package:flutter/material.dart';
 
-class PandaPage extends StatefulWidget {
+class PandaPage extends StatelessWidget {
   const PandaPage({super.key});
 
-  @override
-  State<PandaPage> createState() => _PandaPageState();
-}
-
-class _PandaPageState extends State<PandaPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
