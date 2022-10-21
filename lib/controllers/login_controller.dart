@@ -1,16 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/models/user_model.dart';
-import 'package:flutter/foundation.dart';
 import 'package:coffeesoc/pages/login_pg.dart';
 import 'package:coffeesoc/start/appsetup.dart';
 
 //for authentication/login
 class LoginController extends GetxController {
   static LoginController instance = Get.find();
-
+  // late BuildContext context;
   Rxn<User> fbUser = Rxn<User>();
   final googleSignIn = GoogleSignIn();
   RxBool isLoggedIn = false.obs;
@@ -20,13 +20,6 @@ class LoginController extends GetxController {
 
   GoogleSignInAccount? _googleAcc;
   UserModel? _userModel;
-
-//for initialization
-  @override
-  void onInit() {
-    super.onInit();
-    _getUpdate();
-  }
 
   @override
   void onReady() {
@@ -126,5 +119,3 @@ class LoginController extends GetxController {
     });
   }
 }
-
-void _getUpdate() {}

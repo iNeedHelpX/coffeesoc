@@ -8,6 +8,7 @@ import 'package:coffeesoc/pages/map_page.dart';
 import 'package:coffeesoc/start/app_bars/listbaricons.dart';
 import 'package:coffeesoc/start/app_bars/radialbar.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
+import 'package:new_version/new_version.dart';
 
 class AppSetup extends StatefulWidget {
   const AppSetup({Key? key}) : super(key: key);
@@ -26,6 +27,11 @@ class AppSetupState extends State<AppSetup> {
     MapPage(),
     AccountPage(),
   ];
+  @override
+  void initState() {
+    super.initState();
+    _checkVersion();
+  }
 
   CurvedNavigationBar curvedNavBar() {
     return CurvedNavigationBar(
@@ -61,5 +67,13 @@ class AppSetupState extends State<AppSetup> {
         bottomNavigationBar: curvedNavBar(),
       ),
     );
+  }
+
+  void _checkVersion() {
+    final newVersion = NewVersion(
+      androidId: "com.juliapak.coffeesoc",
+      iOSId: "com.juliapak.coffeesoc",
+    );
+    newVersion.showAlertIfNecessary(context: context);
   }
 }
