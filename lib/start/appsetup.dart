@@ -40,7 +40,7 @@ class AppSetupState extends State<AppSetup> {
       buttonBackgroundColor: containerback,
       color: barback.withOpacity(0.7),
       backgroundColor: Colors.transparent,
-      animationCurve: Curves.linearToEaseOut,
+      animationCurve: Curves.bounceInOut,
       items: listBarIcons(),
       onTap: (index) {
         setState(() {
@@ -55,7 +55,6 @@ class AppSetupState extends State<AppSetup> {
     return JumpingTabBar(
       items: [
         TabItemIcon(
-          iconData: Icon(Icons.abc_outlined, color: Colors.amberAccent),
           startColor: Colors.red,
           endColor: Colors.green,
           curveColor: Colors.yellow,
