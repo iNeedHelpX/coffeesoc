@@ -55,7 +55,7 @@ class AppSetupState extends State<AppSetup> {
     return JumpingTabBar(
       items: [
         TabItemIcon(
-         iconData: ,
+          iconData: Icon(Icons.abc_outlined, color: Colors.amberAccent),
           startColor: Colors.red,
           endColor: Colors.green,
           curveColor: Colors.yellow,
