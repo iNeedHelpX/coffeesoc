@@ -8,7 +8,7 @@ import 'package:coffeesoc/pages/map_page.dart';
 import 'package:coffeesoc/start/app_bars/listbaricons.dart';
 import 'package:coffeesoc/start/app_bars/radialbar.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
-import 'package:jumping_bottom_nav_bar/jumping_bottom_nav_bar.dart';
+
 import 'package:new_version/new_version.dart';
 
 class AppSetup extends StatefulWidget {
@@ -40,7 +40,7 @@ class AppSetupState extends State<AppSetup> {
       buttonBackgroundColor: containerback,
       color: barback.withOpacity(0.7),
       backgroundColor: Colors.transparent,
-      animationCurve: Curves.bounceInOut,
+      animationCurve: Curves.easeInOutBack,
       items: listBarIcons(),
       onTap: (index) {
         setState(() {
@@ -48,18 +48,6 @@ class AppSetupState extends State<AppSetup> {
               index; // changing selected page as per bar index selected by the user
         });
       },
-    );
-  }
-
-  JumpingTabBar jumpingBar() {
-    return JumpingTabBar(
-      items: [
-        TabItemIcon(
-          startColor: Colors.red,
-          endColor: Colors.green,
-          curveColor: Colors.yellow,
-        ),
-      ],
     );
   }
 
