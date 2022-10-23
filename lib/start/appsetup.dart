@@ -8,7 +8,6 @@ import 'package:coffeesoc/pages/map_page.dart';
 import 'package:coffeesoc/start/app_bars/listbaricons.dart';
 import 'package:coffeesoc/start/app_bars/radialbar.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
-
 import 'package:new_version/new_version.dart';
 
 class AppSetup extends StatefulWidget {
