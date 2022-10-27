@@ -39,7 +39,7 @@ class AppSetupState extends State<AppSetup> {
       buttonBackgroundColor: containerback,
       color: barback.withOpacity(0.7),
       backgroundColor: Colors.transparent,
-      animationCurve: Curves.easeInOutBack,
+      animationCurve: Curves.easeInOut,
       items: listBarIcons(),
       onTap: (index) {
         setState(() {
