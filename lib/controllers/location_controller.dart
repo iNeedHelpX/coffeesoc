@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   late Position? myLocation;
-  var isLoading = false.obs;
+  RxBool isLoading = false.obs;
 
   @override
   void onInit() {
@@ -39,12 +39,9 @@ class LocationController extends GetxController {
 
     myLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    if (myLocation != null) {
+    if (isLoading == true) {
       return LoadScreen();
     }
     //position stream?
   }
-
-  //custom icons
-  void getCustomIcon() {}
 }
