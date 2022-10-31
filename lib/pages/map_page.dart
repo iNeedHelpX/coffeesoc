@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:flutter/material.dart';
