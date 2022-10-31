@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
@@ -6,7 +7,7 @@ import 'package:get/get.dart';
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   late Position myLocation;
-  // RxBool isLoading = false.obs;
+  RxBool isLoading = false.obs;
 
   @override
   void onInit() {
@@ -37,8 +38,8 @@ class LocationController extends GetxController {
 
     myLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    // if (isLoading == true) {
-    //   return LoadScreen();
-    // }
+    if (isLoading == true) {
+      return LoadScreen();
+    }
   }
 }
