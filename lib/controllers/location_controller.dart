@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 //controller for location, not currently in use
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
-  late Position? myLocation;
+  late Position myLocation;
   // RxBool isLoading = false.obs;
 
   @override
