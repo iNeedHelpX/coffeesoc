@@ -1,7 +1,9 @@
 import 'package:coffeesoc/globalvars.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+//secondary maps page because i need to learn get properly!
 class MapsViewPg extends StatefulWidget {
   const MapsViewPg({super.key});
 
@@ -10,6 +12,8 @@ class MapsViewPg extends StatefulWidget {
 }
 
 class _MapsViewPgState extends State<MapsViewPg> {
+  Completer<GoogleMapController> _controller = Completer();
+
   @override
   Widget build(BuildContext context) {
     return Stack(
