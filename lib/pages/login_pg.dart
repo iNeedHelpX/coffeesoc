@@ -10,9 +10,10 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: medpink,
-      body: Stack(
+    return Container(
+      decoration: BoxDecoration(
+          gradient: FlutterGradients.saintPetersburg(tileMode: TileMode.clamp)),
+      child: Stack(
         children: [
           Center(
             child: Column(
