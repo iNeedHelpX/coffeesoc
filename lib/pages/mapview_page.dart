@@ -12,7 +12,7 @@ class MapsViewPg extends StatefulWidget {
 }
 
 class _MapsViewPgState extends State<MapsViewPg> {
-  Completer<GoogleMapController> _controller = Completer();
+  Completer<GoogleMapController> mvController = Completer();
 
   @override
   Widget build(BuildContext context) {
