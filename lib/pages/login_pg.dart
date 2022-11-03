@@ -12,7 +12,8 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          gradient: FlutterGradients.saintPetersburg(tileMode: TileMode.clamp)),
+        gradient: FlutterGradients.octoberSilence(tileMode: TileMode.clamp),
+      ),
       child: Stack(
         children: [
           Center(
@@ -21,9 +22,9 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+                  padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(15, 20, 15, 5),
+                    padding: EdgeInsets.fromLTRB(10, 20, 10, 5),
                     decoration: BoxDecoration(
                       gradient: FlutterGradients.coldEvening(
                           tileMode: TileMode.clamp),
@@ -32,12 +33,12 @@ class LoginPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "No need to register. Just sign in with Google!",
+                          "No need to register just sign in with Google",
+                          textAlign: TextAlign.center,
                           //style info next
                           style: GoogleFonts.fjallaOne(
                             color: brighty,
-                            fontSize: 30,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 32,
                           ),
                         ),
                         //buffer space
