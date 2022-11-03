@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
 
 class LoginPage extends StatelessWidget {
@@ -29,6 +28,20 @@ class LoginPage extends StatelessWidget {
                       gradient: FlutterGradients.coldEvening(
                           tileMode: TileMode.clamp),
                       borderRadius: BorderRadius.circular(25),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromARGB(255, 8, 177, 234),
+                          offset: Offset(-12.0, -12.0),
+                          blurRadius: 25,
+                          spreadRadius: 3.0,
+                        ),
+                        BoxShadow(
+                          color: Color.fromARGB(255, 70, 68, 145),
+                          offset: Offset(5.0, 5.0),
+                          blurRadius: 24,
+                          spreadRadius: 2.0,
+                        ),
+                      ],
                     ),
                     child: Column(
                       children: [
@@ -37,13 +50,13 @@ class LoginPage extends StatelessWidget {
                           textAlign: TextAlign.center,
                           //style info next
                           style: GoogleFonts.fjallaOne(
-                            color: brighty,
+                            color: Colors.black,
                             fontSize: 32,
                           ),
                         ),
                         //buffer space
                         SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         SignInButton(
                           Buttons.Google,
