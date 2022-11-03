@@ -3,7 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/pages/account_page.dart';
-import 'package:coffeesoc/pages/home_page.dart';
+import 'package:coffeesoc/pages/coffeeshop_page.dart';
 import 'package:coffeesoc/pages/map_page.dart';
 import 'package:coffeesoc/start/app_bars/listbaricons.dart';
 import 'package:coffeesoc/start/app_bars/radialbar.dart';
@@ -23,7 +23,7 @@ class AppSetupState extends State<AppSetup> {
   final _pageOptions = [
 //pages
     // PandaPage(),
-    HomePage(),
+    CoffeeCupPage(),
     MapPage(),
     AccountPage(),
   ];
