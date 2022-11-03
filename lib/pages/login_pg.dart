@@ -46,12 +46,12 @@ class LoginPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "No need to register just sign in with Google",
+                          "No need to register, just sign in with Google",
                           textAlign: TextAlign.center,
                           //style info next
                           style: GoogleFonts.fjallaOne(
-                            color: Colors.black,
-                            fontSize: 32,
+                            textStyle:
+                                Theme.of(context).textTheme.headlineSmall,
                           ),
                         ),
                         //buffer space
