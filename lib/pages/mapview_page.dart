@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-//secondary maps page because i need to learn get properly!
+//secondary maps page because i need to learn GetX properly!
 class MapsViewPg extends StatefulWidget {
   const MapsViewPg({super.key});
 
