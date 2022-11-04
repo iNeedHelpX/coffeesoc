@@ -17,7 +17,7 @@ to align the header title to the center
 <li> <b>Flutter/dart</b> For mobile app front end<br></li>
 <li> <b>RapydApi</b> Payments implementation<br></li>
 <li> <b>Firebase</b> For auth + database.<br></li>
-<li> <b>Solidity/web3</b> You'll see the contracts folder and .sol file, however I decided against pursuing that as there are real time constraints. <br></li>
+<li> <b>GoogleMaps & Paces API</b> For the map page. <br></li>
 <br>
     </div>
 
