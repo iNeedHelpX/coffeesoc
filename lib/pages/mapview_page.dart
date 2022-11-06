@@ -20,6 +20,9 @@ class _MapsViewPgState extends State<MapsViewPg> {
       children: [
         //map here
         GoogleMap(
+          onMapCreated: (GoogleMapController controller) {
+            mvController.complete(controller);
+          },
           myLocationEnabled: true,
           myLocationButtonEnabled: false,
           initialCameraPosition: CameraPosition(
