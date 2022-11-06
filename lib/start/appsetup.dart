@@ -1,3 +1,5 @@
+import 'package:coffeesoc/globalvars.dart';
+import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:coffeesoc/pages/panda_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +26,7 @@ class AppSetupState extends State<AppSetup> {
 //pages
     // PandaPage(),
     CoffeeCupPage(),
-    MapPage(),
+    MapsPage(),
     AccountPage(),
   ];
   @override
