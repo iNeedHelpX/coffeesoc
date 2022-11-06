@@ -9,6 +9,7 @@ class LocationController extends GetxController {
   static LocationController instance = Get.find();
   late Position myLocation;
   Rx<Geolocator> geolocator = Geolocator().obs;
+  RxBool isLoading = false.obs;
 
   @override
   void onInit() {
@@ -36,8 +37,12 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
+    _getMyLoc();
+    //position stream?
+  }
+
+  _getMyLoc() async {
     myLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    //position stream?
   }
 }
