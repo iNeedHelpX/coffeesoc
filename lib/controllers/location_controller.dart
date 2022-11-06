@@ -3,13 +3,15 @@ import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:coffeesoc/pages/map_page.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 //controller for location, not currently in use
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   late Position myLocation;
-  Rx<Geolocator> geolocator = Geolocator().obs;
-  RxBool isLoading = false.obs;
+  Rx<Geolocator>? geolocator = Geolocator().obs;
+  // RxBool isLoading = false.obs;
+  // Rx<LatLng> currentLatLng = LatLng().obs;
 
   @override
   void onInit() {
@@ -37,11 +39,11 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
-    _getMyLoc();
+    getMyLoc();
     //position stream?
   }
 
-  _getMyLoc() async {
+  getMyLoc() async {
     myLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
   }
