@@ -1,15 +1,10 @@
-import 'package:coffeesoc/start/loading.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:get/get.dart';
-import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 
 //this is the page that shows the google map
-
-//secondary map page
 
 class MapsPage extends StatefulWidget {
   const MapsPage({super.key});
