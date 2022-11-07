@@ -5,15 +5,13 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-//controller for location, not currently in use
+//location controller
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   Position? myLocation;
   Rx<Geolocator>? geolocator = Geolocator().obs;
   LatLng? currentLatLng;
   RxBool isLoading = false.obs;
-  // RxBool isLoading = false.obs;
-  // Rx<LatLng> currentLatLng = LatLng().obs;
 
   @override
   void onInit() async {
@@ -44,12 +42,7 @@ class LocationController extends GetxController {
 
     myLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-
-    //position stream?
   }
 
-  getMyLocation() async {
-    myLocation = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
-  }
+  //next func here
 }
