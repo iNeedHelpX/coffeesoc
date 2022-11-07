@@ -1,12 +1,9 @@
-import 'package:coffeesoc/globalvars.dart';
-import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
-import 'package:coffeesoc/pages/panda_page.dart';
+import 'package:coffeesoc/pages/mapview_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/pages/account_page.dart';
 import 'package:coffeesoc/pages/coffeeshop_page.dart';
-import 'package:coffeesoc/pages/map_page.dart';
 import 'package:coffeesoc/start/app_bars/listbaricons.dart';
 import 'package:coffeesoc/start/app_bars/radialbar.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
@@ -26,7 +23,7 @@ class AppSetupState extends State<AppSetup> {
 //pages
     // PandaPage(),
     CoffeeCupPage(),
-    MapsPage(),
+    MapsPage2(),
     AccountPage(),
   ];
   @override
