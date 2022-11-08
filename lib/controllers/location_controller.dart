@@ -37,9 +37,11 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
+    // geolocator = (await Geolocator.getCurrentPosition(
+    //     desiredAccuracy: LocationAccuracy.high));
 
-    myLocation = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+    // myLocation = await Geolocator.getCurrentPosition(
+    //     desiredAccuracy: LocationAccuracy.high);
   }
 
   //next func here

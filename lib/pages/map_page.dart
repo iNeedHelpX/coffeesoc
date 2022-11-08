@@ -42,6 +42,7 @@ class _MapsPageState extends State<MapsPage> {
 
                 Container(
                   child: GoogleMap(
+                    myLocationEnabled: true,
                     initialCameraPosition: CameraPosition(
                         //get user location
                         target: currentLatLng!,
