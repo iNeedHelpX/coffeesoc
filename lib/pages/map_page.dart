@@ -1,6 +1,8 @@
+import 'package:coffeesoc/globalvars.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 
@@ -46,6 +48,43 @@ class _MapsPageState extends State<MapsPage> {
                     initialCameraPosition: CameraPosition(
                         //get user location
                         target: currentLatLng!,
+                        zoom: 16),
+                    minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
+                    zoomGesturesEnabled: true,
+
+                    //this sets the scroll limit so that there is no excessive API usage from scroll off
+                    cameraTargetBounds: CameraTargetBounds(
+                      LatLngBounds(
+                        northeast: LatLng(43.7970928, -79.3067414),
+                        southwest: LatLng(43.592580, -79.483674),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+    );
+  }
+}
+
+class MapPg extends StatelessWidget {
+  const MapPg({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: locationController.isLoading!.value == true
+          ? LoadScreen()
+          : Stack(
+              children: [
+                // you must wrap the map within a container or else it will say something about render box not being laid out and this: Another exception was thrown: RenderUiKitView object was given an infinite size during layout.
+
+                Container(
+                  child: GoogleMap(
+                    myLocationEnabled: true,
+                    initialCameraPosition: CameraPosition(
+                        //get user location
+                        target: locationController.currentLatLng!,
                         zoom: 16),
                     minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
                     zoomGesturesEnabled: true,

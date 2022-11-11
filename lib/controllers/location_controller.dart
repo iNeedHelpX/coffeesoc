@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -7,13 +8,18 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   Position? myLocation;
-  Rx<Geolocator>? geolocator = Geolocator().obs;
+
+  //this controls getting the location of the user!!
   LatLng? currentLatLng;
-  RxBool isLoading = false.obs;
+
+  //fetch location function
+
+  RxBool? isLoading = true.obs;
 
   @override
   void onInit() async {
     super.onInit();
+    fetchLoc();
     getpermission();
   }
 
@@ -37,12 +43,21 @@ class LocationController extends GetxController {
     if (permission == LocationPermission.deniedForever) {
       return Future.error("location permissions permanently denied");
     }
-    // geolocator = (await Geolocator.getCurrentPosition(
-    //     desiredAccuracy: LocationAccuracy.high));
 
     // myLocation = await Geolocator.getCurrentPosition(
     //     desiredAccuracy: LocationAccuracy.high);
   }
 
-  //next func here
+  //fetch location function
+  void fetchLoc() async {
+    try {
+      isLoading!(true);
+      await Geolocator.getCurrentPosition().then((currLocation) =>
+          currentLatLng =
+              new LatLng(currLocation.latitude, currLocation.longitude));
+    } finally {
+      isLoading!(false);
+    }
+    update();
+  }
 }

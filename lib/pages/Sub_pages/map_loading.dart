@@ -27,9 +27,6 @@ class _LoadScreenState extends State<LoadScreen> {
           SizedBox(
             height: 10,
           ),
-          CircularProgressIndicator(
-            color: tabicon,
-          )
         ],
       ),
     );
