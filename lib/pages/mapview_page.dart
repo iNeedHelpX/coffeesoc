@@ -30,6 +30,7 @@ class MapsPage2 extends StatelessWidget {
                             //get user location
                             target: locationController.currentLatLng!,
                             zoom: 16),
+                        compassEnabled: false,
                         minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
                         zoomGesturesEnabled: true,
                         cameraTargetBounds: CameraTargetBounds(

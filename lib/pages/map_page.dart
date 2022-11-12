@@ -82,6 +82,8 @@ class MapPg extends StatelessWidget {
                 Container(
                   child: GoogleMap(
                     myLocationEnabled: true,
+                    // compassEnabled: false,
+                    myLocationButtonEnabled: false,
                     initialCameraPosition: CameraPosition(
                         //get user location
                         target: locationController.currentLatLng!,
