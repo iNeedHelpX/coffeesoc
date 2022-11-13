@@ -24,7 +24,7 @@ class AppSetupState extends State<AppSetup> {
 //pages
     // PandaPage(),
     CoffeeCupPage(),
-    MapPg(),
+    MapPage(),
     AccountPage(),
   ];
   @override
