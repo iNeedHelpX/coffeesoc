@@ -20,7 +20,6 @@ class MapPage extends StatelessWidget {
                 Container(
                   child: GoogleMap(
                     myLocationEnabled: true,
-
                     myLocationButtonEnabled: false,
                     initialCameraPosition: CameraPosition(
                         //get user location
