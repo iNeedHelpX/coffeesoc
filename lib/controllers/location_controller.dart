@@ -49,6 +49,9 @@ class LocationController extends GetxController {
   }
 
   //fetch location function
+  Future<void> getCurrentLocation() async {}
+
+  //secondary location function i dont know how this works!
   void fetchLoc() async {
     try {
       isLoading!(true);
