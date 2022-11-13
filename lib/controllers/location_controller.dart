@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'package:coffeesoc/colors/colours_list.dart';
+import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
-
+import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -8,22 +10,44 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 //location controller
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
+  Rxn<GoogleMapController> googleMapController =
+      Rxn<GoogleMapController>();
   Position? myLocation;
   //this controls getting the location of the user!!
   LatLng? currentLatLng;
-
   final RxnDouble latitude = RxnDouble();
   final RxnDouble longitude = RxnDouble();
-
-  //fetch location function
-
-  RxBool? isLoading = true.obs;
+//stream subscription position
+late StreamSubscription<Position>streamSubscription;
+  //isloading func
+RxBool? isLoading = true.obs;
 
   @override
   void onInit() async {
+     getpermission();
     super.onInit();
-    fetchLoc();
-    getpermission();
+  }
+
+//ON READY METHOD
+  @override
+  void onReady() async {
+    try {
+      Geolocator locationData = await Geolocator.getCurrentPosition().asStream().;
+
+      latitude.value = locationData.;
+
+      longitude.value = locationData.longitude!;
+    } catch (e) {
+      Get.snackbar(
+        'ERROR! No location found'.tr,
+        e.toString(),
+        snackPosition: SnackPosition.TOP,
+        duration: const Duration(seconds: 4),
+        backgroundColor: Colors.yellow,
+        colorText: Colors.black,
+      );
+    }
+    super.onReady();
   }
 
   getpermission() async {
@@ -52,24 +76,5 @@ class LocationController extends GetxController {
   }
 
   //fetch location function
-  Future<void> getCurrentLocation() async {}
-  getCurrentLoc() async {
-    var position = await locationService.getCurrentLocation();
-    currentLocation.value =
-        googlemap.LatLng(position.latitude, position.longitude);
-    update();
-  }
 
-  //secondary location function i dont know how this works!
-  void fetchLoc() async {
-    try {
-      isLoading!(true);
-      await Geolocator.getCurrentPosition().then((currLocation) =>
-          currentLatLng =
-              new LatLng(currLocation.latitude, currLocation.longitude));
-    } finally {
-      isLoading!(false);
-    }
-    update();
-  }
 }
