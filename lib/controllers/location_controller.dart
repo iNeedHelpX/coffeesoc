@@ -29,20 +29,7 @@ class LocationController extends GetxController {
 //ON READY METHOD used to get location of user
   @override
   void onReady() async {
-    try {
-      LocationData locations = await loc.getLocation();
-      latitude.value = locations.latitude!;
-      longitude.value = locations.longitude!;
-    } catch (e) {
-      Get.snackbar(
-        'ERROR! No location'.tr,
-        e.toString(),
-        snackPosition: SnackPosition.TOP,
-        duration: const Duration(seconds: 4),
-        backgroundColor: Colors.yellow,
-        colorText: Colors.black,
-      );
-    }
+    getLocation();
     super.onReady();
   }
 
@@ -73,5 +60,20 @@ class LocationController extends GetxController {
   }
 
   //fetch location function
-
+  getLocation() async {
+    try {
+      LocationData locations = await loc.getLocation();
+      latitude.value = locations.latitude!;
+      longitude.value = locations.longitude!;
+    } catch (e) {
+      Get.snackbar(
+        "ERROR! Can't get location".tr,
+        e.toString(),
+        snackPosition: SnackPosition.TOP,
+        duration: const Duration(seconds: 4),
+        backgroundColor: Colors.yellow,
+        colorText: Colors.black,
+      );
+    }
+  }
 }
