@@ -11,6 +11,7 @@ class MapPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //you will need to load the google map or show the loading map screen if there is no known location of user
       body: locationController.isLoading!.value == true
           ? LoadScreen()
           : Stack(
