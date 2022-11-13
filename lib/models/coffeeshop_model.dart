@@ -1,3 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class CoffeeShopModel {}
+class CoffeeShopModel {
+  String? placeId;
+
+  CoffeeShopModel({
+    this.placeId,
+  });
+}

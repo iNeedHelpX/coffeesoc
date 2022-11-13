@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
+
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -8,9 +9,11 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   Position? myLocation;
-
   //this controls getting the location of the user!!
   LatLng? currentLatLng;
+
+  final RxnDouble latitude = RxnDouble();
+  final RxnDouble longitude = RxnDouble();
 
   //fetch location function
 
@@ -50,6 +53,12 @@ class LocationController extends GetxController {
 
   //fetch location function
   Future<void> getCurrentLocation() async {}
+  getCurrentLoc() async {
+    var position = await locationService.getCurrentLocation();
+    currentLocation.value =
+        googlemap.LatLng(position.latitude, position.longitude);
+    update();
+  }
 
   //secondary location function i dont know how this works!
   void fetchLoc() async {
