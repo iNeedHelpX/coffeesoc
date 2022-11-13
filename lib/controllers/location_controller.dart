@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
 
 //location controller
 class LocationController extends GetxController {
   static LocationController instance = Get.find();
   Rxn<GoogleMapController> googleMapController = Rxn<GoogleMapController>();
+
+  final Location loc = Location();
   // Position? myLocation;
   //this controls getting the location of the user!!
   // LatLng? currentLatLng;
@@ -27,9 +30,9 @@ class LocationController extends GetxController {
   @override
   void onReady() async {
     try {
-      Position locations = await Geolocator.getCurrentPosition();
-      latitude.value = locations.latitude;
-      longitude.value = locations.longitude;
+      LocationData locations = await loc.getLocation();
+      latitude.value = locations.latitude!;
+      longitude.value = locations.longitude!;
     } catch (e) {
       Get.snackbar(
         'ERROR! No location'.tr,

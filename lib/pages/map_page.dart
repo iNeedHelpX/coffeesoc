@@ -26,7 +26,8 @@ class MapPage extends StatelessWidget {
                     myLocationButtonEnabled: false,
                     initialCameraPosition: CameraPosition(
                         //get user location
-                        target: locationController.currentLatLng!,
+                        target: LatLng(locationController.latitude.value!,
+                            locationController.longitude.value!),
                         zoom: 15.5),
                     minMaxZoomPreference: MinMaxZoomPreference(15.5, 19),
                     zoomGesturesEnabled: true,
