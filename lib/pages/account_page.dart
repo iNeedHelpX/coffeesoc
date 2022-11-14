@@ -16,25 +16,25 @@ class _AccountPageState extends State<AccountPage> {
       child: Stack(
         children: [
           SafeArea(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                //logout button
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurpleAccent, // background
-                    foregroundColor: gold,
-                    // foreground
+            child: Container(
+              alignment: Alignment.center,
+              child: Column(
+                children: [
+                  //logout button
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepPurpleAccent, // background
+                      foregroundColor: gold,
+                      // foreground
+                    ),
+                    onPressed: () {
+                      loginController.signOut();
+                      // authController.signOut();
+                    },
+                    child: Text('Logout'),
                   ),
-                  onPressed: () {
-                    loginController.signOut();
-                    // authController.signOut();
-                  },
-                  child: Text('Logout'),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
