@@ -18,7 +18,7 @@ class AppSetup extends StatefulWidget {
 }
 
 class AppSetupState extends State<AppSetup> {
-  int selectedpage = 1;
+  int selectedpage = 0;
 
   final _pageOptions = [
 //pages

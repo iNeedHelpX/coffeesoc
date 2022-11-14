@@ -41,7 +41,7 @@ class MapPage extends StatelessWidget {
                   minMaxZoomPreference: MinMaxZoomPreference(18, 20),
                   mapType: MapType.hybrid,
                   myLocationEnabled: true,
-                  myLocationButtonEnabled: false,
+                  myLocationButtonEnabled: true,
                   //this restricts the api useage of maps
                   cameraTargetBounds: CameraTargetBounds(
                     LatLngBounds(
