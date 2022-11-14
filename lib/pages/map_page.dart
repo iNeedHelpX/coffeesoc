@@ -43,7 +43,7 @@ class MapPage extends StatelessWidget {
                   myLocationEnabled: true,
                   myLocationButtonEnabled: true,
 
-                  //this restricts the api
+                  //this restricts the api useage of maps
                   cameraTargetBounds: CameraTargetBounds(
                     LatLngBounds(
                       northeast: LatLng(43.7970928, -79.3067414),
