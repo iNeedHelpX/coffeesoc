@@ -1,5 +1,4 @@
 import 'package:coffeesoc/controllers/location_controller.dart';
-import 'package:coffeesoc/globalvars.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -15,7 +14,7 @@ class MapPage extends StatelessWidget {
     final LocationController locController =
         Get.put<LocationController>(LocationController());
 
-    Widget buildGoogleMapWidget() {
+    Widget googleMap() {
       return Obx(() => locController.latitude.value != null &&
               locController.longitude.value != null
           ? Center(
@@ -37,12 +36,12 @@ class MapPage extends StatelessWidget {
                       locController.latitude.value!,
                       locController.longitude.value!,
                     ),
-                    zoom: 15.5,
+                    zoom: 18.5,
                   ),
-                  mapType: MapType.normal,
+                  minMaxZoomPreference: MinMaxZoomPreference(18, 20),
+                  mapType: MapType.hybrid,
                   myLocationEnabled: true,
-                  myLocationButtonEnabled: true,
-
+                  myLocationButtonEnabled: false,
                   //this restricts the api useage of maps
                   cameraTargetBounds: CameraTargetBounds(
                     LatLngBounds(
@@ -58,7 +57,7 @@ class MapPage extends StatelessWidget {
 
     //you will need to load the google map or show the loading map screen if there is no known location of user
     return Stack(
-      children: [buildGoogleMapWidget()],
+      children: [googleMap()],
     );
   }
 }

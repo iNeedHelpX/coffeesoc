@@ -18,9 +18,8 @@ class LocationController extends GetxController {
   // LatLng? currentLatLng;
   final RxnDouble latitude = RxnDouble();
   final RxnDouble longitude = RxnDouble();
-//stream subscription position
-  late StreamSubscription<Position> streamSubscription;
-  Rxn<Position> pos = Rxn<Position>();
+  LocationData? myCurrentLocation;
+
 //use this method to get permissions
   @override
   void onInit() async {
@@ -31,33 +30,20 @@ class LocationController extends GetxController {
 //ON READY METHOD used to get location of user
   @override
   void onReady() async {
-    try {
-      LocationData locationData = await loc.getLocation();
-
-      latitude.value = locationData.latitude!;
-
-      longitude.value = locationData.longitude!;
-    } catch (e) {
-      Get.snackbar(
-        'Error'.tr,
-        e.toString(),
-        snackPosition: SnackPosition.BOTTOM,
-        duration: const Duration(seconds: 10),
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-      );
-    }
+    getCurrentLocation();
 
     super.onReady();
   }
 
-  //mayvbe set map screen?
-  setMapScreen(Position? pos) {
-    if (pos != null) {
-      Get.offAll(() => LoadScreen());
-    } else {
-      Get.offAll(() => MapPage());
-    }
+  //get location
+  void getCurrentLocation() async {
+    LocationData location = await loc.getLocation();
+    latitude.value = location.latitude;
+    longitude.value = location.longitude;
+    loc.getLocation().then((location) {
+      myCurrentLocation = location;
+    });
+    update();
   }
 
 //get the users permissions for location
@@ -82,7 +68,4 @@ class LocationController extends GetxController {
       return Future.error("location permissions permanently denied");
     }
   }
-
-  //fetch location function
-
 }
