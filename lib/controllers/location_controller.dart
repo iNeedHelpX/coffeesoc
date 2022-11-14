@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
+import 'package:coffeesoc/pages/map_page.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
@@ -18,7 +20,7 @@ class LocationController extends GetxController {
   final RxnDouble longitude = RxnDouble();
 //stream subscription position
   late StreamSubscription<Position> streamSubscription;
-
+  Rxn<Position> pos = Rxn<Position>();
 //use this method to get permissions
   @override
   void onInit() async {
@@ -29,8 +31,33 @@ class LocationController extends GetxController {
 //ON READY METHOD used to get location of user
   @override
   void onReady() async {
-    getLocation();
+    try {
+      LocationData locationData = await loc.getLocation();
+
+      latitude.value = locationData.latitude!;
+
+      longitude.value = locationData.longitude!;
+    } catch (e) {
+      Get.snackbar(
+        'Error'.tr,
+        e.toString(),
+        snackPosition: SnackPosition.BOTTOM,
+        duration: const Duration(seconds: 10),
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
+      );
+    }
+
     super.onReady();
+  }
+
+  //mayvbe set map screen?
+  setMapScreen(Position? pos) {
+    if (pos != null) {
+      Get.offAll(() => LoadScreen());
+    } else {
+      Get.offAll(() => MapPage());
+    }
   }
 
 //get the users permissions for location
@@ -57,20 +84,5 @@ class LocationController extends GetxController {
   }
 
   //fetch location function
-  getLocation() async {
-    try {
-      LocationData locations = await loc.getLocation();
-      latitude.value = locations.latitude!;
-      longitude.value = locations.longitude!;
-    } catch (e) {
-      Get.snackbar(
-        "ERROR! Can't get location".tr,
-        e.toString(),
-        snackPosition: SnackPosition.TOP,
-        duration: const Duration(seconds: 4),
-        backgroundColor: Colors.yellow,
-        colorText: Colors.black,
-      );
-    }
-  }
+
 }

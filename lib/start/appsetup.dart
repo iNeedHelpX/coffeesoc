@@ -60,6 +60,7 @@ class AppSetupState extends State<AppSetup> {
         ),
       ),
       child: Scaffold(
+        // backgroundColor: bg,
         extendBodyBehindAppBar: true,
         appBar: myRadialBar(context),
         body: _pageOptions[selectedpage],
