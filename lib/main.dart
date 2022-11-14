@@ -1,7 +1,7 @@
 import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:coffeesoc/controllers/cart_controller.dart';
+import 'package:coffeesoc/controllers/shop_controller.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/start/start.dart';

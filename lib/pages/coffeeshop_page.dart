@@ -18,6 +18,11 @@ class CoffeeCupPage extends StatelessWidget {
                   boomtitle: 'Shop listings',
                   subtext: 'This is the listings section',
                 ),
+                SizedBox(
+                  height: 20,
+                ),
+
+                //nearby shops
               ],
             ),
           ),
