@@ -87,7 +87,7 @@ class CoffeeListingWidget extends StatelessWidget {
                       productController.shops[index].name!,
                       style: GoogleFonts.courgette(
                           fontSize: 38,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           color: Colors.white),
                     ),
                     SizedBox(
@@ -95,8 +95,10 @@ class CoffeeListingWidget extends StatelessWidget {
                     ),
                     Text(
                       "Address: ${productController.shops[index].address}",
-                      style:
-                          GoogleFonts.karla(fontSize: 16, color: Colors.white),
+                      style: GoogleFonts.karla(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                     SizedBox(
                       height: 4.0,
