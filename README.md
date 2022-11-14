@@ -35,10 +35,8 @@ You must have the flutter sdk installed if you are testing this from source.Flut
 
 # A few notes about the files
 
-I am teaching myself GetX and was trying to experiment with various solutions to getting the cart functionality and user login with Google correct. I sectioned off non-used files into seperate folders. These are the folders with non-used files:
+I am teaching myself GetX and was trying to experiment with various solutions....
 <br>
-<li> <b> lib/Models/components</b></li>
-<li> <b> lib/controllers/Services</b></li>
  </div>
 
 ## As for my personal setup
