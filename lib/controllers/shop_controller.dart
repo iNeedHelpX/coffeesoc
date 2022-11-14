@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class ShopController extends GetxController {
   static ShopController instance = Get.find();
   RxList<ShopModel> shops = RxList<ShopModel>([]);
-  String collection = "coffeeshops";
+  String collection = "coffeeShops";
 
   @override
   void onReady() {

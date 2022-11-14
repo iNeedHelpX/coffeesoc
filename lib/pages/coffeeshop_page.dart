@@ -1,3 +1,4 @@
+import 'package:coffeesoc/pages/widgets/listings_widget.dart';
 import 'package:coffeesoc/pages/widgets/neurobox.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,7 @@ class CoffeeCupPage extends StatelessWidget {
                 ),
 
                 //nearby shops
+                CoffeeShopList()
               ],
             ),
           ),

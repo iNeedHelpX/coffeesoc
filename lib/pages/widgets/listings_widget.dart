@@ -6,10 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../colors/colours_list.dart';
 
-class CoffeeShop extends StatelessWidget {
+class CoffeeShopList extends StatelessWidget {
   final productController = Get.put(ShopController());
 
-  CoffeeShop({
+  CoffeeShopList({
     Key? key,
   }) : super(key: key);
 
@@ -69,7 +69,7 @@ class CoffeeListingWidget extends StatelessWidget {
               Stack(
                 children: <Widget>[
                   Image(
-                    height: 250,
+                    height: 220,
                     width: 400,
                     fit: BoxFit.cover,
                     image: NetworkImage(
@@ -91,7 +91,7 @@ class CoffeeListingWidget extends StatelessWidget {
                       height: 5.0,
                     ),
                     Text(
-                      "from: ${productController.shops[index].brand}",
+                      "Address: ${productController.shops[index].address}",
                       style:
                           GoogleFonts.karla(fontSize: 16, color: Colors.white),
                     ),
