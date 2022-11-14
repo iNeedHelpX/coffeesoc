@@ -11,8 +11,6 @@ Future<void> main() async {
   await initialization.then((value) {
 //place controller access in here
     Get.put(LoginController());
-    Get.put(CartController());
-    Get.put(LocationController());
   });
   runApp(Start());
 }
