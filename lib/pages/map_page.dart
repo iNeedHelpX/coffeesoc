@@ -1,9 +1,6 @@
-import 'package:coffeesoc/colors/colours_list.dart';
-import 'package:coffeesoc/colors/greygradient.dart';
 import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 //this is the page that shows the google map

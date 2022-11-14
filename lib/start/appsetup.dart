@@ -36,7 +36,7 @@ class AppSetupState extends State<AppSetup> {
   CurvedNavigationBar curvedNavBar() {
     return CurvedNavigationBar(
       index: selectedpage,
-      buttonBackgroundColor: containerback,
+      buttonBackgroundColor: Color.fromARGB(255, 251, 111, 204),
       color: barback.withOpacity(0.7),
       backgroundColor: Colors.transparent,
       animationCurve: Curves.easeInOut,

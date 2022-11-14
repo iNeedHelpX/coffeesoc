@@ -1,6 +1,7 @@
 import 'package:coffeesoc/controllers/shop_controller.dart';
 import 'package:coffeesoc/models/coffeeshop_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -61,7 +62,7 @@ class CoffeeListingWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         child: Material(
           borderRadius: BorderRadius.circular(10),
-          color: textblue,
+          color: Color.fromARGB(255, 143, 132, 222),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,13 +80,15 @@ class CoffeeListingWidget extends StatelessWidget {
                 ],
               ),
               Container(
-                padding: EdgeInsets.all(5.0),
+                // padding: EdgeInsets.all(5.0),
                 child: Column(
                   children: <Widget>[
                     Text(
                       productController.shops[index].name!,
-                      style:
-                          GoogleFonts.lemon(fontSize: 34, color: lightgoldbg),
+                      style: GoogleFonts.courgette(
+                          fontSize: 38,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
                     ),
                     SizedBox(
                       height: 5.0,
