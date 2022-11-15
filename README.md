@@ -8,7 +8,7 @@ to align the header title to the center
 <h1 align="center">$\textcolor{#FF0978}{\Huge\texttt{About this app}}$</h1>
 
 * Coffee Society is a temporary name right now!
-* Promoting coffe culture in Toronto ON Canada
+* Promoting coffee culture in Toronto ON Canada
 
 <h1 align="center">$\textcolor{#4242E2}{\Huge\texttt{The Technical Details}}$</h1>
 
@@ -27,10 +27,9 @@ You must have the flutter sdk installed if you are testing this from source.Flut
 
  $\textcolor{#FF0BB6}{\Large\textsf{I will sends you an apk file if needed}}$
 
- This app runs firebase for datastorage and login. I've managed to map the user login to the shopping cart, which means cart items are personal to each user. Admittedly this was a very difficult task to figure out.
+ This app runs firebase for datastorage and login. I've managed to map the user's cart to login, which means cart items are personal to each user. Admittedly this was a very difficult task to figure out. I decided to leave the shopping cart out until a later date.
 
- I can write solidity smart contracts and know how to use the blockchain. However I decided against adding any of that related functionality at this time!
-
+I am going to add some element of blockchain to this soon, maybe to track points etc.
 <div align="center">
 
 # A few notes about the files
