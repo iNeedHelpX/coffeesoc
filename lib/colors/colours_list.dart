@@ -18,7 +18,7 @@ const tabBar = Color.fromARGB(255, 93, 55, 255);
 const darkblue = Color.fromARGB(255, 44, 67, 177);
 const brightgreen = Color.fromARGB(255, 83, 255, 60);
 const text2 = Color.fromARGB(255, 246, 222, 255);
-
+const prettyPurple = Color.fromARGB(255, 143, 132, 222);
 //helpful for text and errors!!
 const fill2 = Color.fromARGB(255, 38, 38, 44);
 const filltext = Color.fromARGB(255, 82, 83, 137);

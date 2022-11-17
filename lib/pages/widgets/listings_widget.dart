@@ -66,7 +66,7 @@ class CoffeeListingWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           child: Material(
             borderRadius: BorderRadius.circular(10),
-            color: Color.fromARGB(255, 143, 132, 222),
+            color: prettyPurple,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
