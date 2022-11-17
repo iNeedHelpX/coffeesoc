@@ -55,58 +55,63 @@ class CoffeeListingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.fromLTRB(15, 5, 15, 15),
-      child: ClipRRect(
-        clipBehavior: Clip.antiAlias,
-        borderRadius: BorderRadius.circular(10),
-        child: Material(
+    return GestureDetector(
+      onTap: () {
+        // this is where you put the get.to the details page
+      },
+      child: Container(
+        margin: EdgeInsets.fromLTRB(15, 5, 15, 15),
+        child: ClipRRect(
+          clipBehavior: Clip.antiAlias,
           borderRadius: BorderRadius.circular(10),
-          color: Color.fromARGB(255, 143, 132, 222),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Stack(
-                children: <Widget>[
-                  Image(
-                    height: 220,
-                    width: 400,
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                      productController.shops[index].image!,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                // padding: EdgeInsets.all(5.0),
-                child: Column(
+          child: Material(
+            borderRadius: BorderRadius.circular(10),
+            color: Color.fromARGB(255, 143, 132, 222),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Stack(
                   children: <Widget>[
-                    Text(
-                      productController.shops[index].name!,
-                      style: GoogleFonts.courgette(
-                          fontSize: 38,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 5.0,
-                    ),
-                    Text(
-                      "Address: ${productController.shops[index].address}",
-                      style: GoogleFonts.karla(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black),
-                    ),
-                    SizedBox(
-                      height: 4.0,
+                    Image(
+                      height: 220,
+                      width: 400,
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        productController.shops[index].image!,
+                      ),
                     ),
                   ],
                 ),
-              ),
-            ],
+                Container(
+                  // padding: EdgeInsets.all(5.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        productController.shops[index].name!,
+                        style: GoogleFonts.courgette(
+                            fontSize: 38,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      Text(
+                        "Address: ${productController.shops[index].address}",
+                        style: GoogleFonts.karla(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                      ),
+                      SizedBox(
+                        height: 4.0,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
