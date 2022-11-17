@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class DetailsView extends StatelessWidget {
-  // final String imgUrl;
   //the return types required when you call detailsview
   final String name;
   final String imgUrl;
