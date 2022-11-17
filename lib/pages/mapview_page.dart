@@ -1,6 +1,6 @@
 import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
-import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
+import 'package:coffeesoc/pages/widgets/map_loading.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';

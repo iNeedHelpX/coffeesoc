@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:coffeesoc/pages/Sub_pages/map_loading.dart';
+import 'package:coffeesoc/pages/widgets/map_loading.dart';
 import 'package:coffeesoc/pages/map_page.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
