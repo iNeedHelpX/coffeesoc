@@ -25,6 +25,10 @@ AppBar myRadialBar(BuildContext context) {
       Padding(
         padding: const EdgeInsets.only(right: 20.0),
         child: IconButton(
+          color: lightgoldbg,
+          hoverColor: textblue,
+          focusColor: containerback,
+          splashColor: medpink,
           //bag icon
           icon: Icon(Icons.shopping_bag_rounded),
           onPressed: () {
