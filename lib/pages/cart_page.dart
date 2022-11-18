@@ -9,7 +9,7 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        color: barback,
+        color: lightpur,
         child: Stack(children: [
           SafeArea(
             //back button
@@ -21,7 +21,7 @@ class CartPage extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.arrow_circle_left,
-                color: gold,
+                color: darkgrey,
               ),
             ),
           )
