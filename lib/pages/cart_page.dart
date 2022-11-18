@@ -1,6 +1,6 @@
 import 'package:coffeesoc/colors/colours_list.dart';
+import 'package:coffeesoc/pages/widgets/custombackbutton.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -12,21 +12,9 @@ class CartPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-          child: Stack(children: [
-            IconButton(
-              splashRadius: 28,
-              splashColor: lightgoldbg,
-              onPressed: () {
-                //back to home
-                Get.back();
-                //Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_circle_left,
-                color: darkgrey,
-              ),
-            ),
-          ]),
+          child: Stack(
+            children: [customBackButton()],
+          ),
         ),
       ),
     );
