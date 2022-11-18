@@ -13,7 +13,7 @@ class CartPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: Stack(
-            children: [customBackButton()],
+            children: [pinkBackButton()],
           ),
         ),
       ),

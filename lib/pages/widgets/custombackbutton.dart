@@ -27,3 +27,24 @@ ClipOval customBackButton() {
     ),
   );
 }
+
+ElevatedButton pinkBackButton() {
+  return ElevatedButton(
+    onPressed: () {
+      Get.back();
+    },
+    child: Icon(
+      Icons.chevron_left_rounded,
+      color: Colors.white,
+      size: 36,
+    ),
+    style: ElevatedButton.styleFrom(
+      shape: CircleBorder(),
+      padding: EdgeInsets.all(10),
+
+      backgroundColor: brightpink,
+      surfaceTintColor: gold, // <-- Button color
+      foregroundColor: gold, // <-- Splash color
+    ),
+  );
+}
