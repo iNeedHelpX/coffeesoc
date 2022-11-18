@@ -15,6 +15,7 @@ class CartPage extends StatelessWidget {
           child: Stack(children: [
             IconButton(
               splashRadius: 28,
+              splashColor: lightgoldbg,
               onPressed: () {
                 //back to home
                 Get.back();
