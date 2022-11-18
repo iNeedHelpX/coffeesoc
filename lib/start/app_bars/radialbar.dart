@@ -1,6 +1,8 @@
+import 'package:coffeesoc/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:coffeesoc/colors/colours_list.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 AppBar myRadialBar(BuildContext context) {
@@ -27,6 +29,7 @@ AppBar myRadialBar(BuildContext context) {
           icon: Icon(Icons.shopping_bag_rounded),
           onPressed: () {
             //do something here. get.to the cart page!
+            Get.to(() => CartPage());
           },
         ),
       )
