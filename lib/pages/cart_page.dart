@@ -7,22 +7,19 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        color: lightpur,
+    return Scaffold(
+      backgroundColor: lightpur,
+      body: SafeArea(
         child: Stack(children: [
-          SafeArea(
-            //back button
-            child: IconButton(
-              onPressed: () {
-                //back to home
-                Get.back();
-                //Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_circle_left,
-                color: darkgrey,
-              ),
+          IconButton(
+            onPressed: () {
+              //back to home
+              Get.back();
+              //Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_circle_left,
+              color: darkgrey,
             ),
           )
         ]),
