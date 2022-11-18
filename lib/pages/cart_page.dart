@@ -20,7 +20,7 @@ class CartPage extends StatelessWidget {
                 //Navigator.pop(context);
               },
               icon: const Icon(
-                Icons.backspace,
+                Icons.arrow_back,
                 color: Color.fromARGB(255, 247, 0, 97),
               ),
             ),
