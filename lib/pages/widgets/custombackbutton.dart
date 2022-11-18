@@ -48,3 +48,21 @@ ElevatedButton pinkBackButton() {
     ),
   );
 }
+
+InkWell plainGreyButton() {
+  return InkWell(
+    // Splash color
+    splashColor: lightgoldbg,
+    onTap: () {
+      //go back to the home page
+      Get.back();
+      //Navigator.pop(context);
+    },
+
+    child: Icon(
+      Icons.chevron_left_rounded,
+      color: greytext,
+      size: 36,
+    ),
+  );
+}
