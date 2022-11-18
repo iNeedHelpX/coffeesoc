@@ -40,7 +40,7 @@ ElevatedButton pinkBackButton() {
     ),
     style: ElevatedButton.styleFrom(
       shape: CircleBorder(),
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(8),
 
       backgroundColor: brightpink,
       surfaceTintColor: gold, // <-- Button color
