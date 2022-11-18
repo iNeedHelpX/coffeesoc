@@ -19,7 +19,18 @@ AppBar myRadialBar(BuildContext context) {
       ),
     ),
     elevation: 16,
-
+    actions: [
+      Padding(
+        padding: const EdgeInsets.only(right: 20.0),
+        child: IconButton(
+          //bag icon
+          icon: Icon(Icons.shopping_bag_rounded),
+          onPressed: () {
+            //do something
+          },
+        ),
+      )
+    ],
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(24),
