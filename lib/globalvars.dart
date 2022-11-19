@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:coffeesoc/config/config.dart';
 import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -15,3 +16,4 @@ LoginController loginController = LoginController.instance;
 // LocationController locationController = LocationController.instance;
 //other variables
 Logger logger = Logger();
+var rapydConfig = Configurations();
