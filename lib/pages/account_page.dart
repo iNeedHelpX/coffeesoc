@@ -1,5 +1,6 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
+import 'package:coffeesoc/pages/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatefulWidget {
@@ -20,6 +21,15 @@ class _AccountPageState extends State<AccountPage> {
               alignment: Alignment.center,
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 30,
+                  ),
+                  CustomButton(
+                      text: "Logout",
+                      bgColor: medpink,
+                      onTap: () {
+                        loginController.signOut();
+                      }),
                   //logout button
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
