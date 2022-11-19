@@ -24,13 +24,11 @@ class CartPage extends StatelessWidget {
                   plainBackButton(),
                   Center(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Cart Page",
-                          style: GoogleFonts.courgette(
-                            color: Colors.white,
+                          "Your Cart",
+                          style: GoogleFonts.acme(
+                            color: Colors.black,
                             fontWeight: FontWeight.w500,
                             fontSize: 40,
                             shadows: [
