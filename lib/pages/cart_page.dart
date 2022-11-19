@@ -14,13 +14,35 @@ class CartPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+            child: Stack(
               children: [
-                plainBackButton(),
-                Center(
-                  child: Text("Your Cart"),
-                )
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    plainBackButton(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Your Cart",
+                          style: GoogleFonts.acme(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 40,
+                            shadows: [
+                              Shadow(
+                                offset: const Offset(8, 8.0),
+                                blurRadius: 17.0,
+                                color: fill2.withOpacity(0.6),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             )),
       ),
