@@ -20,10 +20,12 @@ class CartPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    plainBackButton(),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    Row(
                       children: [
+                        plainBackButton(),
+                        SizedBox(
+                          width: 70,
+                        ),
                         Text(
                           "Your Cart",
                           style: GoogleFonts.acme(
@@ -40,7 +42,7 @@ class CartPage extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
+                    )
                   ],
                 ),
               ],
