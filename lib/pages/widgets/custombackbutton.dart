@@ -49,7 +49,7 @@ ElevatedButton pinkBackButton() {
   );
 }
 
-InkWell plainGreyButton() {
+InkWell plainBackButton() {
   return InkWell(
     // Splash color
     splashColor: lightgoldbg,
@@ -61,7 +61,7 @@ InkWell plainGreyButton() {
 
     child: Icon(
       Icons.chevron_left_rounded,
-      color: greytext,
+      color: textturq3,
       size: 36,
     ),
   );
