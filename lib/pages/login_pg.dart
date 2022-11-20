@@ -11,6 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        //outer purple box
         gradient: FlutterGradients.lilyMeadow(tileMode: TileMode.clamp),
       ),
       child: Stack(
@@ -25,6 +26,7 @@ class LoginPage extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.fromLTRB(10, 20, 10, 5),
                     decoration: BoxDecoration(
+                      //blue box around google login
                       gradient: FlutterGradients.coldEvening(
                           tileMode: TileMode.clamp),
                       borderRadius: BorderRadius.circular(25),
