@@ -30,25 +30,36 @@ class _AccountPageState extends State<AccountPage> {
                       onTap: () {
                         loginController.signOut();
                       }),
-                  //logout button
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurpleAccent, // background
-                      foregroundColor: gold,
-                      // foreground
-                    ),
-                    onPressed: () {
-                      loginController.signOut();
-                      // authController.signOut();
-                    },
-                    child: Text('Logout'),
-                  ),
+
+                  // PurpleLogout(),
                 ],
               ),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class PurpleLogout extends StatelessWidget {
+  const PurpleLogout({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.deepPurpleAccent, // background
+        foregroundColor: gold,
+        // foreground
+      ),
+      onPressed: () {
+        loginController.signOut();
+        // authController.signOut();
+      },
+      child: Text('Logout'),
     );
   }
 }
