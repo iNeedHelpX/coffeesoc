@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: FlutterGradients.octoberSilence(tileMode: TileMode.clamp),
+        gradient: FlutterGradients.lilyMeadow(tileMode: TileMode.clamp),
       ),
       child: Stack(
         children: [
