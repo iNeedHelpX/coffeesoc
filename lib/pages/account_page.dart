@@ -26,7 +26,7 @@ class _AccountPageState extends State<AccountPage> {
                   ),
                   CustomButton(
                       text: "Logout",
-                      bgColor: medpink,
+                      bgColor: prettyPurple,
                       onTap: () {
                         loginController.signOut();
                       }),
