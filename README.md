@@ -18,6 +18,7 @@ to align the header title to the center
 <li> <b>RapydApi</b> Payments implementation<br></li>
 <li> <b>Firebase</b> For auth + database.<br></li>
 <li> <b>GoogleMaps & Paces API</b> For the map page. <br></li>
+<li> <b>Solidity Smart contracts</b> For use at later point. not sure what i am doing yet! <br></li>
 <br>
     </div>
 
