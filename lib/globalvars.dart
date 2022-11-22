@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:coffeesoc/config/config.dart';
-import 'package:coffeesoc/controllers/location_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
