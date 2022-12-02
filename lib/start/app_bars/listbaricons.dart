@@ -9,7 +9,7 @@ List<Widget> listBarIcons() {
     //icons list here
     // PandaIcn(),
     CupIcon(),
-    PandaIcn(),
+    RecommendIcn(),
     AccIcn(),
   ];
 }

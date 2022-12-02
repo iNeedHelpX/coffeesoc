@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PandaIcn extends StatelessWidget {
-  const PandaIcn({Key? key}) : super(key: key);
+class RecommendIcn extends StatelessWidget {
+  const RecommendIcn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class PandaIcn extends StatelessWidget {
         height: 35,
         width: 35,
         child: Image.asset(
-          'assets/icons/panda.png',
+          'assets/icons/rec.png',
           height: 25,
         ));
   }
