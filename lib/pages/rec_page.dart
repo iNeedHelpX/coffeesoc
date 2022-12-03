@@ -12,7 +12,7 @@ class PandaPage extends StatelessWidget {
           children: [
             NeuromorphicBox(
                 boomtitle: "Recommended by others",
-                subtext: "shops visited recently"),
+                subtext: "shops visited by other people in your network"),
           ],
         ),
       ),
