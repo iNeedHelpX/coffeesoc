@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
 import 'package:logger/logger.dart';
+import 'package:rapyd/rapyd.dart';
 
 //firebase stuff
 final Future<FirebaseApp> initialization = Firebase.initializeApp();
@@ -16,3 +17,4 @@ LoginController loginController = LoginController.instance;
 //other variables
 Logger logger = Logger();
 var rapydConfig = Configurations();
+var rapydClient = RapydClient(rapydConfig.rapydAccess, rapydConfig.rapydSecret);

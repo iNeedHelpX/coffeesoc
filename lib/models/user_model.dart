@@ -31,6 +31,7 @@ class UserModel {
     photoURL = snapshot.data()?['PHOTOURL'] ?? '';
     id = snapshot.data()?['ID'] ?? '';
     cart = _convertCartItems(snapshot.data()?['CART'] ?? []);
+    reviews = _convertCartItems(snapshot.data()?['REVIEWS'] ?? []);
   }
 
   List<CartItemModel> _convertCartItems(List cartFomDb) {
