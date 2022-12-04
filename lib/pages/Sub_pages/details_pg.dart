@@ -1,4 +1,6 @@
+import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DetailsView extends StatelessWidget {
   //the return types required when you call detailsview
@@ -33,15 +35,17 @@ class DetailsView extends StatelessWidget {
                 //put things here?
               ],
             ),
-            SafeArea(
-              child: IconButton(
+            Padding(
+              padding: const EdgeInsets.only(left: 15, top: 40),
+              child: FloatingActionButton(
+                mini: true,
+                foregroundColor: lightgoldbg,
+                hoverColor: containerback,
+                backgroundColor: tabicon.withOpacity(0.8),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.back();
                 },
-                icon: const Icon(
-                  Icons.backspace,
-                  color: Color.fromARGB(255, 247, 0, 97),
-                ),
+                child: Icon(Icons.backspace),
               ),
             ),
           ],
