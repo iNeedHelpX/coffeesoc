@@ -1,11 +1,9 @@
+import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/controllers/shop_controller.dart';
 import 'package:coffeesoc/models/coffeeshop_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../colors/colours_list.dart';
 
 class CoffeeShopList extends StatelessWidget {
   final productController = Get.put(ShopController());
