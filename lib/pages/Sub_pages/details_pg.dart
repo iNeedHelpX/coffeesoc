@@ -59,8 +59,8 @@ class DetailsView extends StatelessWidget {
                 width: 40,
                 height: 40,
                 child: Icon(
-                  Icons.chevron_left_outlined,
-                  size: 35,
+                  Icons.chevron_left_rounded,
+                  size: 38,
                   color: lightgoldbg,
                 ),
               ),
