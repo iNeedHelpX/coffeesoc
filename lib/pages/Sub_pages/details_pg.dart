@@ -26,6 +26,7 @@ class DetailsView extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: size.width,
+                        height: size.height / 2.5,
                         child: Image(
                             image: NetworkImage(imgUrl), fit: BoxFit.cover),
                       ),
@@ -59,7 +60,8 @@ class DetailsView extends StatelessWidget {
                 height: 40,
                 child: Icon(
                   Icons.chevron_left_outlined,
-                  color: greytext2,
+                  size: 35,
+                  color: lightgoldbg,
                 ),
               ),
             ),
