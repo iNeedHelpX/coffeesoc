@@ -7,7 +7,7 @@ import 'package:coffeesoc/start/start.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialization.then((value) {
-//place controller access in here
+//place controller access in here. this registers the controller
     Get.put(LoginController());
   });
   runApp(Start());
