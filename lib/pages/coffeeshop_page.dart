@@ -1,3 +1,4 @@
+import 'package:coffeesoc/pages/widgets/cup_listing.dart';
 import 'package:coffeesoc/pages/widgets/listings_widget.dart';
 import 'package:coffeesoc/pages/widgets/neurobox.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class CoffeeCupPage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-
+                CupListing(),
                 //nearby shops
                 CoffeeShopList()
               ],
