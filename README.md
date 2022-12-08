@@ -24,7 +24,7 @@ It might not seem as if small business has a major impact on the environment...H
 <li> <b>Flutter/dart</b> For mobile app front end<br></li>
 <li> <b>RapydApi</b> Payments implementation<br></li>
 <li> <b>Firebase</b> For auth + database.<br></li>
-<li> <b>GoogleMaps & Paces API</b> For the map page. <br></li>
+<!-- <li> <b>GoogleMaps & Paces API</b> For the map page. <br></li> -->
 <li> <b>Solidity Smart contracts</b> For use at later point. not sure what i am doing yet! <br></li>
 <br>
     </div>
