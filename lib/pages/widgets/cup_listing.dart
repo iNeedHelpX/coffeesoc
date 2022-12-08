@@ -111,12 +111,13 @@ class CupWidget extends StatelessWidget {
                         backgroundColor: textturq2,
                         onPressed: () {
                           //buy the item
+                          //cartController.addToCart(product!);
                         },
                         child: SizedBox(
                           height: 50,
                           width: 50,
                           child: Image.asset(
-                            'assets/icons/order1.png',
+                            'assets/icons/order-now.png',
                             height: 32,
                           ),
                         ),

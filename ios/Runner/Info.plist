@@ -52,6 +52,13 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>io.flutter.embedded_views_preview</key>
+		<true/>
+		<key>NSAllowsArbitraryLoad</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

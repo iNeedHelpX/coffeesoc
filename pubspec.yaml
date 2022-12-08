@@ -61,6 +61,7 @@ dependencies:
   new_version: ^0.3.1
   flutter_google_places: ^0.3.0
   location: ^4.4.0
+  webview_flutter_plus: ^0.3.0+2
 
 dev_dependencies:
   flutter_test:
