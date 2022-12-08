@@ -8,9 +8,10 @@ to align the header title to the center
 <h1 align="center">$\textcolor{#FF0978}{\Huge\texttt{About this app}}$</h1>
 
 * Coffee Society is a temporary name right now!
-* Promoting coffee culture in Toronto ON Canada
+* Promoting local coffee culture in Toronto ON Canada
+* Elevator pitch: Coffee lovers rejoice! Branch out of your caffeinated comfort zone and try more of what the Toronto coffee scene has to offer.
 
-### As for my personal setup
+### Since local coffee shops are small businesses, impacts on climate must be limited..why is climate change important to them?
 
 As temperatures rise and droughts intensify, good coffee will become increasingly difficult to grow and expensive to buy. Since governments always react slowly to the problem, there is an opportunity to help.
 
