@@ -14,6 +14,7 @@ class ShopController extends GetxController {
     shops.bindStream(getAllProducts());
   }
 
+//so it updates automatically as shops are added/removed
   Stream<List<ShopModel>> getAllProducts() =>
       firebaseFirestore.collection(collection).snapshots().map(
             (query) => query.docs

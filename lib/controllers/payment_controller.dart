@@ -1,3 +1,14 @@
 import 'package:get/get.dart';
 
-class PaymentController extends GetxController {}
+//process payment
+class PaymentController extends GetxController {
+  @override
+  void onInit() async {
+    super.onInit();
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+  }
+}
