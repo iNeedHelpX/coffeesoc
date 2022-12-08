@@ -10,7 +10,7 @@ to align the header title to the center
 * Coffee Society is a temporary name right now!
 * Promoting coffee culture in Toronto ON Canada
 
-## As for my personal setup
+### As for my personal setup
 
 As temperatures rise and droughts intensify, good coffee will become increasingly difficult to grow and expensive to buy. Since governments always react slowly to the problem, there is an opportunity to help.
 
