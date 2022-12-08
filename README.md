@@ -10,7 +10,11 @@ to align the header title to the center
 * Coffee Society is a temporary name right now!
 * Promoting coffee culture in Toronto ON Canada
 
-You must have the flutter sdk installed if you are testing this from source.Flutter allows you to write code once and deploy to multiple devices, it is hardware Agnostic. More about flutter here: <https://flutter.dev/>
+## As for my personal setup
+
+As temperatures rise and droughts intensify, good coffee will become increasingly difficult to grow and expensive to buy. Since governments always react slowly to the problem, there is an opportunity to help.
+
+It might not seem as if small business has a major impact on the environment...However the cumulative size and impact of small businesses (like coffee shops) is massive. For example, there are more specialty coffee shops in USA than Starbucks outlets!
 
 <h1 align="center">$\textcolor{#4242E2}{\Huge\texttt{The Technical Details}}$</h1>
 
