@@ -113,11 +113,11 @@ class CupWidget extends StatelessWidget {
                           //buy the item
                         },
                         child: SizedBox(
-                          height: 40,
-                          width: 40,
+                          height: 50,
+                          width: 50,
                           child: Image.asset(
-                            'assets/icons/buy.png',
-                            height: 25,
+                            'assets/icons/order1.png',
+                            height: 32,
                           ),
                         ),
                       ),
