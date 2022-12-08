@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
+import 'package:webview_flutter_plus/webview_flutter_plus.dart';
+
 class CheckoutPage extends StatefulWidget {
   const CheckoutPage({
     Key? key,
@@ -27,12 +29,12 @@ class _CheckoutPageState extends State<CheckoutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Palette.white,
+        backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
           'Buy Now',
           style: TextStyle(
-            color: Palette.black,
+            color: Colors.black,
           ),
         ),
         leading: IconButton(
@@ -40,7 +42,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
           icon: const Icon(Icons.close),
         ),
         iconTheme: const IconThemeData(
-          color: Palette.black,
+          color: Colors.black,
         ),
       ),
       body: SafeArea(
