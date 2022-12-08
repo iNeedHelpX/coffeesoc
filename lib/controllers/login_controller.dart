@@ -1,3 +1,4 @@
+import 'package:coffeesoc/config/config.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,6 +7,8 @@ import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/models/user_model.dart';
 import 'package:coffeesoc/pages/login_pg.dart';
 import 'package:coffeesoc/start/appsetup.dart';
+import 'package:rapyd/models/customer.dart';
+import 'package:rapyd/rapyd.dart';
 
 //for authentication/login
 class LoginController extends GetxController {
@@ -14,13 +17,18 @@ class LoginController extends GetxController {
   Rxn<User> fbUser = Rxn<User>();
   final googleSignIn = GoogleSignIn();
   RxBool isLoggedIn = false.obs;
+  Rx<RapydClient> rapydUsr =
+      RapydClient(Configurations().rapydAccess, Configurations().rapydSecret)
+          .obs;
+
   Rx<UserModel> userModel = UserModel().obs;
   String usersCollection = "coffeeusers";
   // Rx<UserModel> usrModel = UserModel().obs;
 
   GoogleSignInAccount? _googleAcc;
   UserModel? _userModel;
-
+  CustomerData? _cust;
+  Customer? customerInfo;
   @override
   void onReady() {
     super.onReady();
@@ -29,6 +37,7 @@ class LoginController extends GetxController {
     ever(fbUser, setInitialScreen);
   }
 
+  CustomerData? get customer => _cust;
   UserModel? get loggedInUserModel => _userModel;
 
   setInitialScreen(User? user) {
@@ -65,6 +74,8 @@ class LoginController extends GetxController {
           cart: [],
         );
         _addUserToFB(_newUser, res.user!);
+
+        _createRapydCustomer(_newUser);
       });
     } catch (e) {
       debugPrint(e.toString());
@@ -108,6 +119,23 @@ class LoginController extends GetxController {
       .doc(fbUser.value!.uid)
       .snapshots()
       .map((snapshot) => UserModel.fromSnapshot(snapshot));
+
+  _createRapydCustomer(UserModel usr) async {
+    final rapydClient =
+        RapydClient(Configurations().rapydAccess, Configurations().rapydSecret);
+
+    try {
+      final customer = await rapydClient.createNewCustomer(
+        email: usr.email!,
+        name: usr.name!,
+      );
+
+      print('Created customer successfully, ID: ${customer.data.id}');
+      if (customer.data.email == usr.email) return;
+    } catch (e) {
+      print('ERROR: ${e.toString()}');
+    }
+  }
 
   _addUserToFB(UserModel usr, User firebaseUser) {
     firebaseFirestore.collection(usersCollection).doc(usr.id).set({
