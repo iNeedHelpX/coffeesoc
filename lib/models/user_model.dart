@@ -1,5 +1,6 @@
 import 'package:coffeesoc/models/cart_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:coffeesoc/models/review_model.dart';
 
 class UserModel {
   static const ID = "id";
@@ -14,7 +15,7 @@ class UserModel {
   String? email;
   String? photoURL;
   List<CartItemModel>? cart;
-  List<CartItemModel>? reviews;
+  List<ReviewModel>? reviews;
 
   UserModel({
     this.id,
@@ -31,7 +32,7 @@ class UserModel {
     photoURL = snapshot.data()?['PHOTOURL'] ?? '';
     id = snapshot.data()?['ID'] ?? '';
     cart = _convertCartItems(snapshot.data()?['CART'] ?? []);
-    reviews = _convertCartItems(snapshot.data()?['REVIEWS'] ?? []);
+    // reviews = _convertCartItems(snapshot.data()?['REVIEWS'] ?? []);
   }
 
   List<CartItemModel> _convertCartItems(List cartFomDb) {

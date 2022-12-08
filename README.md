@@ -10,6 +10,8 @@ to align the header title to the center
 * Coffee Society is a temporary name right now!
 * Promoting coffee culture in Toronto ON Canada
 
+You must have the flutter sdk installed if you are testing this from source.Flutter allows you to write code once and deploy to multiple devices, it is hardware Agnostic. More about flutter here: <https://flutter.dev/>
+
 <h1 align="center">$\textcolor{#4242E2}{\Huge\texttt{The Technical Details}}$</h1>
 
 <div align="center"><h3 align="center">Technologies used in this app</h3>
