@@ -3,6 +3,7 @@ import 'package:coffeesoc/controllers/cupinfo_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/models/cup_model.dart';
 import 'package:coffeesoc/models/user_model.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:rapyd/models/customer.dart';
 import 'package:rapyd/rapyd.dart';
@@ -11,12 +12,11 @@ import 'package:rapyd/rapyd.dart';
 class RapydPayments extends GetxController {
   static RapydPayments instance = Get.find();
   static CupInfoController cupController = Get.find();
-  RxList<CupModel> cups = RxList<CupModel>([]);
-  String collection = "buyCoffeeCup";
   int? index;
-  // get price => cupController.cups[index].price;
+
   CustomerData? _cust;
   CustomerData? get customer => _cust;
+  Rxn<User> fbUser = Rxn<User>();
 
   @override
   void onInit() async {
@@ -29,18 +29,20 @@ class RapydPayments extends GetxController {
   }
 
 //check if rapydClient
-  void checkRapydCust(UserModel usr) async {
+  void checkRapydCust() async {
     final customer = await getCustomer(rapydClient);
-    if (customer.data.email != usr.email) {
-      print("${usr.email}");
-      print("hi");
-    } else if (customer.data.email == usr.email) {
-      print("${customer.data.email}");
+    //check if the customer is already registered
+    if (customer.data.email == auth.currentUser!.email) {
+      print("hello you are already registered! ${auth.currentUser!.email}");
+      return;
+    } else if (customer.data.email != auth.currentUser!.email) {
+      print(
+          "${customer.data.email} is going to be registered on rapyd payment");
       createRapydCustomer();
     }
   }
 
-  createRapydCustomer() async {
+  void createRapydCustomer() async {
     final rapydClient =
         RapydClient(Configurations().rapydAccess, Configurations().rapydSecret);
 
