@@ -1,5 +1,5 @@
 import 'package:coffeesoc/config/config.dart';
-import 'package:coffeesoc/controllers/payment_controller.dart';
+import 'package:coffeesoc/controllers/rapyd_payment.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
@@ -12,7 +12,7 @@ Future<void> main() async {
   await initialization.then((value) {
 //place controller access in here. this registers the controller
     Get.put(LoginController());
-    Get.put(PaymentController());
+    Get.put(RapydPayments());
   });
   runApp(Start());
 }

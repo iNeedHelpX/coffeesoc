@@ -5,6 +5,7 @@ import 'package:coffeesoc/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rapyd/models/models.dart';
 
 import '../../colors/colours_list.dart';
 
@@ -30,6 +31,7 @@ class CupListing extends StatelessWidget {
             ) {
               return CupWidget(
                 index: index,
+                usr: loginController.userModel(),
                 // cart: cartController.products[index],
                 cupProd: cupController.cups[index],
                 // product: cartController.products[index],
@@ -46,19 +48,24 @@ class CupWidget extends StatelessWidget {
   // final CartItemModel cartModel;
   final int index;
   final CupModel? cupProd;
+  final CustomerData? data;
+  final UserModel? usr;
   // final CartItemModel cart;
   CupWidget({
     Key? key,
+    required this.usr,
     required this.index,
+
     // required this.cart,
     required this.cupProd,
+    this.data,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        paymentController.createRapydCustomer();
+        paymentController.checkRapydCust(usr!);
         // this is where you put the get.to the details page
         //looks like this:
         // Get.to(() => DetailsView(
@@ -96,12 +103,12 @@ class CupWidget extends StatelessWidget {
                         child: Container(
                           padding: EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 255, 0, 161),
+                              color: textblue,
                               borderRadius: BorderRadius.circular(8)),
                           child: Text(
                             "\$${cupProd!.price} ",
                             style: GoogleFonts.lilitaOne(
-                                fontSize: 23, color: Colors.white),
+                                fontSize: 23, color: brighty),
                           ),
                         ),
                       ),

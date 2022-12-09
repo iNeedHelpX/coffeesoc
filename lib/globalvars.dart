@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:coffeesoc/config/config.dart';
 import 'package:coffeesoc/controllers/cupinfo_controller.dart';
-import 'package:coffeesoc/controllers/payment_controller.dart';
+import 'package:coffeesoc/controllers/rapyd_payment.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
@@ -16,7 +16,7 @@ FirebaseAuth auth = FirebaseAuth.instance;
 //controllers in use
 LoginController loginController = LoginController.instance;
 CupInfoController cupController = CupInfoController.instance;
-PaymentController paymentController = PaymentController.instance;
+RapydPayments paymentController = RapydPayments.instance;
 // LocationController locationController = LocationController.instance;
 //other variables
 Logger logger = Logger();
