@@ -1,7 +1,9 @@
+import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/config/config.dart';
 import 'package:coffeesoc/controllers/cupinfo_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rapyd/models/customer.dart';
 import 'package:rapyd/rapyd.dart';
@@ -32,6 +34,10 @@ class RapydPayments extends GetxController {
     //check if the customer is already registered
     if (customer.data.email == auth.currentUser!.email) {
       print("hello you are already registered! ${auth.currentUser!.email}");
+      Get.snackbar("This is a test statement", "Testing!",
+          snackPosition: SnackPosition.TOP,
+          colorText: Colors.black,
+          backgroundColor: gold2);
       return;
     } else if (customer.data.email != auth.currentUser!.email) {
       print(
