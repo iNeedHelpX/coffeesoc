@@ -1,11 +1,8 @@
 import 'package:coffeesoc/config/config.dart';
 import 'package:coffeesoc/controllers/cupinfo_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
-import 'package:coffeesoc/models/cup_model.dart';
-import 'package:coffeesoc/models/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:rapyd/models/checkout.dart';
 import 'package:rapyd/models/customer.dart';
 import 'package:rapyd/rapyd.dart';
 
