@@ -1,5 +1,7 @@
 import 'package:coffeesoc/controllers/cupinfo_controller.dart';
+import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/models/cup_model.dart';
+import 'package:coffeesoc/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -56,6 +58,7 @@ class CupWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        paymentController.createRapydCustomer();
         // this is where you put the get.to the details page
         //looks like this:
         // Get.to(() => DetailsView(
@@ -96,7 +99,7 @@ class CupWidget extends StatelessWidget {
                               color: Color.fromARGB(255, 255, 0, 161),
                               borderRadius: BorderRadius.circular(8)),
                           child: Text(
-                            "\$${cupController.cups[index].price} ",
+                            "\$${cupProd!.price} ",
                             style: GoogleFonts.lilitaOne(
                                 fontSize: 23, color: Colors.white),
                           ),

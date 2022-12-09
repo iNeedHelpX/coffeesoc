@@ -16,19 +16,18 @@ class LoginController extends GetxController {
   // late BuildContext context;
   Rxn<User> fbUser = Rxn<User>();
   final googleSignIn = GoogleSignIn();
-  RxBool isLoggedIn = false.obs;
+
   Rx<RapydClient> rapydUsr =
       RapydClient(Configurations().rapydAccess, Configurations().rapydSecret)
           .obs;
-
   Rx<UserModel> userModel = UserModel().obs;
   String usersCollection = "coffeeusers";
-  // Rx<UserModel> usrModel = UserModel().obs;
 
   GoogleSignInAccount? _googleAcc;
-  UserModel? _userModel;
+  UserModel? _newUser;
   CustomerData? _cust;
   Customer? customerInfo;
+
   @override
   void onReady() {
     super.onReady();
@@ -38,7 +37,7 @@ class LoginController extends GetxController {
   }
 
   CustomerData? get customer => _cust;
-  UserModel? get loggedInUserModel => _userModel;
+  UserModel? get newUser => _newUser;
 
   setInitialScreen(User? user) {
     if (user == null) {
@@ -75,29 +74,14 @@ class LoginController extends GetxController {
         );
         _addUserToFB(_newUser, res.user!);
 
-        _createRapydCustomer(_newUser);
+        createRapydCustomer(_newUser);
+        print("$_newUser");
       });
     } catch (e) {
       debugPrint(e.toString());
       Get.snackbar("Sign In Failed", "Try again");
     }
   }
-
-  // void signUp() async {
-  //   try {
-  //     await auth
-  //         .createUserWithEmailAndPassword(
-  //             email: email.text.trim(), password: password.text.trim())
-  //         .then((result) {
-  //       String _userId = result.user.uid;
-  //       _addUserToFirestore(_userId);
-  //       _clearControllers();
-  //     });
-  //   } catch (e) {
-  //     debugPrint(e.toString());
-  //     Get.snackbar("Sign In Failed", "Try again");
-  //   }
-  // }
 
   void signOut() async {
     googleSignIn.signOut();
@@ -120,7 +104,7 @@ class LoginController extends GetxController {
       .snapshots()
       .map((snapshot) => UserModel.fromSnapshot(snapshot));
 
-  _createRapydCustomer(UserModel usr) async {
+  void createRapydCustomer(UserModel usr) async {
     final rapydClient =
         RapydClient(Configurations().rapydAccess, Configurations().rapydSecret);
 
@@ -130,11 +114,15 @@ class LoginController extends GetxController {
         name: usr.name!,
       );
 
-      print('Created customer successfully, ID: ${customer.data.id}');
+      print('Created customer successfully, name: ${customer.data.name}');
       if (customer.data.email == usr.email) return;
     } catch (e) {
       print('ERROR: ${e.toString()}');
     }
+  }
+
+  void processRapydPayment() async {
+    try {} catch (e) {}
   }
 
   _addUserToFB(UserModel usr, User firebaseUser) {
