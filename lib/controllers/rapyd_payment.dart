@@ -5,6 +5,7 @@ import 'package:coffeesoc/models/cup_model.dart';
 import 'package:coffeesoc/models/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:rapyd/models/checkout.dart';
 import 'package:rapyd/models/customer.dart';
 import 'package:rapyd/rapyd.dart';
 
@@ -12,8 +13,8 @@ import 'package:rapyd/rapyd.dart';
 class RapydPayments extends GetxController {
   static RapydPayments instance = Get.find();
   static CupInfoController cupController = Get.find();
-  int? index;
-
+  int? index = 0;
+  Customer? customers;
   CustomerData? _cust;
   CustomerData? get customer => _cust;
   Rxn<User> fbUser = Rxn<User>();
@@ -58,13 +59,10 @@ class RapydPayments extends GetxController {
 
   void createPayment() async {
     final customer = await getCustomer(rapydClient);
-
+    print("${customer.data.email}");
+    print("${cupController.cups[index!].price!}");
     try {
-      final pay = await rapydClient.createCheckout(
-          amount: cupController.cups[index!].price!,
-          currency: 'usd',
-          countryCode: 'us',
-          customerId: customer.data.id);
+      // need to create payment here
       print('Payment successful, amount: ${cupController.cups[index!].price!}');
     } catch (e) {
       print('ERROR: ${e.toString()}');

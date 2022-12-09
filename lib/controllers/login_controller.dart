@@ -73,9 +73,8 @@ class LoginController extends GetxController {
           cart: [],
         );
         _addUserToFB(_newUser, res.user!);
-
         createRapydCustomer(_newUser);
-        print("$_newUser");
+        print("${_newUser.email}");
       });
     } catch (e) {
       debugPrint(e.toString());
@@ -119,10 +118,6 @@ class LoginController extends GetxController {
     } catch (e) {
       print('ERROR: ${e.toString()}');
     }
-  }
-
-  void processRapydPayment() async {
-    try {} catch (e) {}
   }
 
   _addUserToFB(UserModel usr, User firebaseUser) {

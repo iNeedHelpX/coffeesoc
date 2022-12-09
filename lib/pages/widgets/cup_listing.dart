@@ -65,7 +65,7 @@ class CupWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        paymentController.checkRapydCust();
+        paymentController.createPayment();
         // this is where you put the get.to the details page
         //looks like this:
         // Get.to(() => DetailsView(
