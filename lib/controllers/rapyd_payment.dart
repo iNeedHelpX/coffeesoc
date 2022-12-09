@@ -13,10 +13,9 @@ class RapydPayments extends GetxController {
   static RapydPayments instance = Get.find();
   static CupInfoController cupController = Get.find();
   int? index = 0;
-  Customer? customers;
-  CustomerData? _cust;
-  CustomerData? get customer => _cust;
-  Rxn<User> fbUser = Rxn<User>();
+  // CustomerData? _cust;
+  // CustomerData? get customer => _cust;
+  // Rxn<User> fbUser = Rxn<User>();
 
   @override
   void onInit() async {
