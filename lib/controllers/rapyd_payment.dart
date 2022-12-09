@@ -37,6 +37,7 @@ class RapydPayments extends GetxController {
       Get.snackbar("This is a test statement", "Testing!",
           snackPosition: SnackPosition.TOP,
           colorText: Colors.black,
+          duration: Duration(seconds: 3),
           backgroundColor: gold2);
       return;
     } else if (customer.data.email != auth.currentUser!.email) {
