@@ -141,7 +141,7 @@ class CupWidget extends StatelessWidget {
                       Text(
                         cupController.cups[index].name!,
                         style: GoogleFonts.courgette(
-                            fontSize: 26,
+                            fontSize: 22,
                             fontWeight: FontWeight.w700,
                             color: Colors.amber),
                       ),
