@@ -152,8 +152,8 @@ class CupWidget extends StatelessWidget {
                         "${cupController.cups[index].info}",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.karla(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
                             color: Colors.white),
                       ),
                       SizedBox(
