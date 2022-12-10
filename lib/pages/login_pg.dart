@@ -63,9 +63,8 @@ class LoginPage extends StatelessWidget {
                         SignInButton(
                           Buttons.Google,
                           onPressed: () {
+                            //sign in logic here, use the getx controller
                             loginController.googleLogin();
-                            //sign in logic goes here
-                            // authController.googleLogin(context);
                           },
                         )
                       ],
