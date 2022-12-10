@@ -65,13 +65,12 @@ class CupWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        paymentController.checkRapydCust();
-        // this is where you put the get.to the details page
-        //looks like this:
-        // Get.to(() => DetailsView(
-        //       imgUrl: cupProd!.image!,
-        //       name: cupProd!.name!,
-        //     ));
+        //do something functional here!
+        // paymentController.checkRapydCust();
+        Get.snackbar("You just tapped here!", "This is a test message!",
+            backgroundColor: gold,
+            duration: Duration(seconds: 4),
+            colorText: Colors.black);
       },
       child: Container(
         margin: EdgeInsets.fromLTRB(15, 5, 15, 15),
