@@ -50,4 +50,4 @@ app.*.map.json
 #hide these related to lib
 /lib/config/
 /lib/config/rapyd_config.dart
-/lib/pages/test/*
+/lib/pages/test
