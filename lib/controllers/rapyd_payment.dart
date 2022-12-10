@@ -2,7 +2,6 @@ import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/config/config.dart';
 import 'package:coffeesoc/controllers/cupinfo_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rapyd/models/customer.dart';

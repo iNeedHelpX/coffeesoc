@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rapyd/models/models.dart';
-
 import '../../colors/colours_list.dart';
 
 class CupListing extends StatelessWidget {
@@ -138,6 +137,7 @@ class CupWidget extends StatelessWidget {
                   // padding: EdgeInsets.all(5.0),
                   child: Column(
                     children: <Widget>[
+                      //headline title text
                       Text(
                         cupController.cups[index].name!,
                         style: GoogleFonts.courgette(
@@ -148,13 +148,17 @@ class CupWidget extends StatelessWidget {
                       SizedBox(
                         height: 5.0,
                       ),
-                      Text(
-                        "${cupController.cups[index].info}",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.karla(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white),
+                      //description text at bottom. white color
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                        child: Text(
+                          "${cupController.cups[index].info}",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.karla(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white),
+                        ),
                       ),
                       SizedBox(
                         height: 4.0,

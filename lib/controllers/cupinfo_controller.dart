@@ -1,7 +1,5 @@
 import 'package:coffeesoc/globalvars.dart';
-import 'package:coffeesoc/models/coffeeshop_model.dart';
 import 'package:coffeesoc/models/cup_model.dart';
-import 'package:coffeesoc/models/user_model.dart';
 import 'package:get/get.dart';
 
 class CupInfoController extends GetxController {
