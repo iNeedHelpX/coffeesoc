@@ -68,6 +68,7 @@ class CupWidget extends StatelessWidget {
         // paymentController.checkRapydCust();
         Get.snackbar("You just tapped here!", "This is a test message!",
             backgroundColor: gold,
+            isDismissible: false,
             duration: Duration(seconds: 4),
             colorText: Colors.black);
       },
