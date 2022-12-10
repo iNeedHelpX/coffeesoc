@@ -1,7 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'dart:developer';
-
 import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 
 class CheckoutPage extends StatefulWidget {
