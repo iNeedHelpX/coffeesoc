@@ -107,7 +107,7 @@ class CupWidget extends StatelessWidget {
                           child: Text(
                             "\$${cupProd!.price} ",
                             style: GoogleFonts.lilitaOne(
-                                fontSize: 23, color: brighty),
+                                fontSize: 25, color: brighty),
                           ),
                         ),
                       ),
