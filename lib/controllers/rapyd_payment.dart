@@ -77,4 +77,22 @@ class RapydPayments extends GetxController {
       name: auth.currentUser!.displayName!,
     );
   }
+
+  // void createRapydCustomer(UserModel usr) async {
+  //   final rapydClient =
+  //       RapydClient(Configurations().rapydAccess, Configurations().rapydSecret);
+
+  //   try {
+  //     final customer = await rapydClient.createNewCustomer(
+  //       email: usr.email!,
+  //       name: usr.name!,
+  //     );
+
+  //     print('Created customer successfully, name: ${customer.data.name}');
+  //     if (customer.data.email == usr.email) return;
+  //   } catch (e) {
+  //     print('ERROR: ${e.toString()}');
+  //   }
+  // }
+
 }
