@@ -10,7 +10,7 @@ class CupInfoController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-
+    //binds the stream to the cup model
     cups.bindStream(getAllProducts());
   }
 
