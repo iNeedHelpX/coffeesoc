@@ -7,7 +7,6 @@ import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/models/user_model.dart';
 import 'package:coffeesoc/pages/login_pg.dart';
 import 'package:coffeesoc/start/appsetup.dart';
-import 'package:rapyd/models/customer.dart';
 import 'package:rapyd/rapyd.dart';
 
 //for authentication/login
@@ -21,12 +20,12 @@ class LoginController extends GetxController {
       RapydClient(Configurations().rapydAccess, Configurations().rapydSecret)
           .obs;
   Rx<UserModel> userModel = UserModel().obs;
+
+  //the firebaseFirestore collection of the users on my app
   String usersCollection = "coffeeusers";
 
   GoogleSignInAccount? _googleAcc;
   UserModel? _newUser;
-  CustomerData? _cust;
-  Customer? customerInfo;
 
   @override
   void onReady() {
@@ -36,9 +35,9 @@ class LoginController extends GetxController {
     ever(fbUser, setInitialScreen);
   }
 
-  CustomerData? get customer => _cust;
   UserModel? get newUser => _newUser;
 
+//sets the initial screen to the login if the user is not logged in. If the user is logged in with their google account, then go to the app setup and start the app
   setInitialScreen(User? user) {
     if (user == null) {
       print("going to login page...");
@@ -50,6 +49,7 @@ class LoginController extends GetxController {
     }
   }
 
+//login with google account and send the info to firebaseFirestore
   void googleLogin() async {
     final googleUser = await googleSignIn.signIn();
     if (googleUser == null) return;
@@ -82,6 +82,7 @@ class LoginController extends GetxController {
     }
   }
 
+//the sign out method
   void signOut() async {
     googleSignIn.signOut();
     auth.signOut();
@@ -97,6 +98,7 @@ class LoginController extends GetxController {
         .update(data);
   }
 
+//this is the live stream that ensures that this automatically updates the user
   Stream<UserModel> listenToUser() => firebaseFirestore
       .collection(usersCollection)
       .doc(fbUser.value!.uid)
@@ -120,6 +122,7 @@ class LoginController extends GetxController {
   //   }
   // }
 
+//adds user to firebaseFirestore
   _addUserToFB(UserModel usr, User firebaseUser) {
     firebaseFirestore.collection(usersCollection).doc(usr.id).set({
       "displayName": usr.name,
