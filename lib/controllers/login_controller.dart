@@ -73,7 +73,7 @@ class LoginController extends GetxController {
           cart: [],
         );
         _addUserToFB(_newUser, res.user!);
-        createRapydCustomer(_newUser);
+        // createRapydCustomer(_newUser);
         print("${_newUser.email}");
       });
     } catch (e) {
@@ -103,22 +103,22 @@ class LoginController extends GetxController {
       .snapshots()
       .map((snapshot) => UserModel.fromSnapshot(snapshot));
 
-  void createRapydCustomer(UserModel usr) async {
-    final rapydClient =
-        RapydClient(Configurations().rapydAccess, Configurations().rapydSecret);
+  // void createRapydCustomer(UserModel usr) async {
+  //   final rapydClient =
+  //       RapydClient(Configurations().rapydAccess, Configurations().rapydSecret);
 
-    try {
-      final customer = await rapydClient.createNewCustomer(
-        email: usr.email!,
-        name: usr.name!,
-      );
+  //   try {
+  //     final customer = await rapydClient.createNewCustomer(
+  //       email: usr.email!,
+  //       name: usr.name!,
+  //     );
 
-      print('Created customer successfully, name: ${customer.data.name}');
-      if (customer.data.email == usr.email) return;
-    } catch (e) {
-      print('ERROR: ${e.toString()}');
-    }
-  }
+  //     print('Created customer successfully, name: ${customer.data.name}');
+  //     if (customer.data.email == usr.email) return;
+  //   } catch (e) {
+  //     print('ERROR: ${e.toString()}');
+  //   }
+  // }
 
   _addUserToFB(UserModel usr, User firebaseUser) {
     firebaseFirestore.collection(usersCollection).doc(usr.id).set({
