@@ -1,3 +1,4 @@
+import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/rec_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -60,13 +61,36 @@ class AppSetupState extends State<AppSetup> {
       ),
       child: Scaffold(
         // backgroundColor: bg,
+        key: scaffoldKey,
         extendBodyBehindAppBar: true,
         appBar: myRadialBar(context),
         body: _pageOptions[selectedpage],
         extendBody: true,
+        resizeToAvoidBottomInset: true,
         bottomNavigationBar: curvedNavBar(),
       ),
     );
+  }
+
+//bottom sheet
+  Future<dynamic> bottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+        backgroundColor: prettyPurple,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(22),
+        ),
+        context: context,
+        builder: (BuildContext context) {
+//return something!!
+          return Stack(
+            children: [
+              SizedBox(
+                height: 100,
+              ),
+              Text("replace")
+            ],
+          );
+        });
   }
 
   void _checkVersion() {
