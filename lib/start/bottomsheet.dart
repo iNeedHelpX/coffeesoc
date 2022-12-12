@@ -6,7 +6,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Future<dynamic> bottomSheet(BuildContext context) async {
-  User? user;
   return showModalBottomSheet(
       backgroundColor: prettyPurple,
       shape: RoundedRectangleBorder(
@@ -14,14 +13,16 @@ Future<dynamic> bottomSheet(BuildContext context) async {
       ),
       context: context,
       builder: (BuildContext context) {
-        //the pink/purple container that hosts the login
+        //the purple pop up container
 
         return SafeArea(
+          //column is centered btw!
           child: Column(
             children: [
               SizedBox(
                 height: 20,
               ),
+              //replace this text here with something else later!
               Text(
                 "Replace ASAP ${auth.currentUser!.displayName}",
                 style: GoogleFonts.courgette(
