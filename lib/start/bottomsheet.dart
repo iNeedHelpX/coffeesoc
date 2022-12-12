@@ -1,5 +1,7 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Future<dynamic> bottomSheet(BuildContext context) async {
   return showModalBottomSheet(
@@ -17,7 +19,13 @@ Future<dynamic> bottomSheet(BuildContext context) async {
               SizedBox(
                 height: 20,
               ),
-              Text("Replace asap Julia")
+              Text(
+                "Replace asap Julia",
+                style: GoogleFonts.courgette(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.limeAccent),
+              )
             ],
           ),
         );
