@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:coffeesoc/pages/splash_pg.dart';
+import 'package:coffeesoc/start/splash_pg.dart';
 
 class Start extends StatefulWidget {
   Start({Key? key}) : super(key: key);

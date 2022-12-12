@@ -5,7 +5,7 @@ Future<dynamic> bottomSheet(BuildContext context) async {
   return showModalBottomSheet(
       backgroundColor: prettyPurple,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(22),
+        borderRadius: BorderRadius.circular(25),
       ),
       context: context,
       builder: (BuildContext context) {
