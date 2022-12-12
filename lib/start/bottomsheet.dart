@@ -11,7 +11,16 @@ Future<dynamic> bottomSheet(BuildContext context) async {
       builder: (BuildContext context) {
         //the pink/purple container that hosts the login
 
-        return Text('need to replace asap julia');
+        return SafeArea(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Text("Replace asap Julia")
+            ],
+          ),
+        );
         //must return something here so yeah, just replace once you know what to do!
       });
 }
