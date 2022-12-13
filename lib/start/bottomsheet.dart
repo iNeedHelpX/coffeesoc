@@ -1,6 +1,7 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/colors/radial_gradient.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
@@ -35,8 +36,10 @@ Future<dynamic> bottomSheet(BuildContext context) async {
               Container(
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    gradient: yellowGreenGradient()),
+                  borderRadius: BorderRadius.circular(25),
+                  gradient:
+                      FlutterGradients.saltMountain(tileMode: TileMode.clamp),
+                ),
                 child: PrettyQr(
                   image: AssetImage('assets/icons/cup.png'),
                   size: 300,
