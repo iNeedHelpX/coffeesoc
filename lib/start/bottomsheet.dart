@@ -1,9 +1,6 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/colors/radial_gradient.dart';
-import 'package:coffeesoc/globalvars.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
@@ -26,14 +23,14 @@ Future<dynamic> bottomSheet(BuildContext context) async {
               ),
               //replace this text here with something else later!
               Text(
-                "Your QR code ${auth.currentUser!.displayName}",
+                "Pay with QR code",
                 style: GoogleFonts.courgette(
-                    fontSize: 26,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 36,
+                    fontWeight: FontWeight.w700,
                     color: Colors.black),
               ),
               SizedBox(
-                height: 50,
+                height: 20,
               ),
               Container(
                 padding: EdgeInsets.all(15),
