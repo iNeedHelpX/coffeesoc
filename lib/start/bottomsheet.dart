@@ -38,7 +38,7 @@ Future<dynamic> bottomSheet(BuildContext context) async {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   gradient:
-                      FlutterGradients.saltMountain(tileMode: TileMode.clamp),
+                      FlutterGradients.glassWater(tileMode: TileMode.clamp),
                 ),
                 child: PrettyQr(
                   image: AssetImage('assets/icons/cup.png'),
