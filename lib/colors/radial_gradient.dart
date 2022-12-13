@@ -10,6 +10,17 @@ RadialGradient yellowbluegradient() {
       Color.fromARGB(255, 84, 100, 255),
       Color.fromARGB(255, 126, 95, 255),
     ],
-    radius: 3.1,
+    radius: 1.4,
+  );
+}
+
+RadialGradient yellowGreenGradient() {
+  return RadialGradient(
+    center: Alignment.bottomLeft,
+    colors: [
+      Color.fromARGB(255, 252, 255, 205),
+      Color.fromARGB(255, 180, 255, 215),
+    ],
+    radius: 1.5,
   );
 }
