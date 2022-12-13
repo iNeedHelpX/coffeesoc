@@ -26,11 +26,11 @@ Future<dynamic> bottomSheet(BuildContext context) async {
               ),
               //replace this text here with something else later!
               Text(
-                "Your QR code ${auth.currentUser!.displayName} :",
+                "Your QR code ${auth.currentUser!.displayName}",
                 style: GoogleFonts.courgette(
-                    fontSize: 24,
+                    fontSize: 26,
                     fontWeight: FontWeight.w600,
-                    color: Colors.limeAccent),
+                    color: Colors.black),
               ),
               SizedBox(
                 height: 50,
@@ -45,7 +45,8 @@ Future<dynamic> bottomSheet(BuildContext context) async {
                   size: 300,
                   data: 'https://www.google.ca',
                   errorCorrectLevel: QrErrorCorrectLevel.H,
-                  typeNumber: 9,
+                  roundEdges: true,
+                  typeNumber: 8,
                 ),
               )
             ],
