@@ -86,8 +86,9 @@ class _AccountPageState extends State<AccountPage> {
                     onTap: () {
                       //do something
                       Get.snackbar(
-                        "test",
+                        "ORDER HISTORY TEST",
                         "this is a test",
+                        backgroundColor: medpink,
                         duration: Duration(seconds: 1),
                       );
                     },
