@@ -1,8 +1,10 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/widgets/custom_button.dart';
+import 'package:coffeesoc/pages/widgets/settings_card.dart';
 import 'package:coffeesoc/start/bottomsheet.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -25,25 +27,16 @@ class _AccountPageState extends State<AccountPage> {
                   SizedBox(
                     height: 10,
                   ),
-
-                  InkWell(
-                    splashColor: tabicon,
-                    onTap: () {
-                      bottomSheet(context);
-                    },
-                    child: Card(
-                      elevation: 5,
-                      child: ListTile(
-                        tileColor: prettyPurple,
-                        title: Text('QR card'),
-                        subtitle: Text("pay with qrcode"),
-                        leading: Icon(
-                          Icons.qr_code_scanner,
-                          size: 40,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
+                  Text(
+                    "Settings",
+                    style: GoogleFonts.courgette(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black),
+                  ),
+                  SettingsCard(
+                    titleText: 'Coming soon Pay with QR code',
+                    subText: 'coming soon',
                   ),
                   SizedBox(
                     height: 40,
