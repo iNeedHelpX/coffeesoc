@@ -20,7 +20,7 @@ class SettingsCard extends StatelessWidget {
       onTap: () {
         // bottomSheet(context);
         Get.snackbar(
-            "Pay with QR code coming soon", "check appstore for updates",
+            "Pay with QR code coming soon!", "check appstore for updates",
             backgroundColor: textturq,
             isDismissible: false,
             duration: Duration(seconds: 5),
