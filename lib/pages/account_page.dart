@@ -61,6 +61,26 @@ class _AccountPageState extends State<AccountPage> {
                     titleText: 'Coming soon! Pay with QR code',
                     subText: 'coming soon',
                   ),
+                  InkWell(
+                    splashColor: containerback,
+                    onTap: () {
+                      //do something
+                      Get.snackbar(
+                        "test",
+                        "this is a test",
+                        duration: Duration(seconds: 1),
+                      );
+                    },
+                    child: SettingCards(
+                      icon: Icon(
+                        Icons.credit_card_outlined,
+                        size: 40,
+                        color: Colors.black,
+                      ),
+                      titleText: 'Credit card',
+                      subText: 'add/view your credit card info',
+                    ),
+                  ),
 
                   SizedBox(
                     height: 40,
