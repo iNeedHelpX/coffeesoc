@@ -121,7 +121,7 @@ class CupWidget extends StatelessWidget {
                         backgroundColor: textturq2,
                         onPressed: () {
                           //buy the item
-                          bottomSheet(context);
+                          // bottomSheet(context);
                         },
                         child: SizedBox(
                           height: 50,

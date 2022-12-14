@@ -17,7 +17,7 @@ class SettingsCard extends StatelessWidget {
     return InkWell(
       splashColor: containerback,
       onTap: () {
-        bottomSheet(context);
+        // bottomSheet(context);
       },
       child: Card(
         elevation: 5,
