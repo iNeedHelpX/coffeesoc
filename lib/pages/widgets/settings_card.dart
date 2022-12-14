@@ -36,6 +36,9 @@ class QRCard extends StatelessWidget {
             size: 40,
             color: Colors.black,
           ),
+          trailing: Icon(
+            Icons.chevron_right,
+          ),
         ),
       ),
     );
@@ -62,6 +65,9 @@ class SettingCards extends StatelessWidget {
         title: Text(titleText),
         subtitle: Text(subText),
         leading: icon,
+        trailing: Icon(
+          Icons.chevron_right,
+        ),
       ),
     );
   }
