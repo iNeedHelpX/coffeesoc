@@ -1,6 +1,7 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/start/bottomsheet.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SettingsCard extends StatelessWidget {
   final String titleText;
@@ -18,6 +19,12 @@ class SettingsCard extends StatelessWidget {
       splashColor: containerback,
       onTap: () {
         // bottomSheet(context);
+        Get.snackbar(
+            "Pay with QR code coming soon", "check appstore for updates",
+            backgroundColor: textturq,
+            isDismissible: false,
+            duration: Duration(seconds: 5),
+            colorText: Colors.black);
       },
       child: Card(
         elevation: 5,
