@@ -33,6 +33,9 @@ class _AccountPageState extends State<AccountPage> {
                         fontWeight: FontWeight.w700,
                         color: Colors.black),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   SettingsCard(
                     titleText: 'Coming soon! Pay with QR code',
                     subText: 'coming soon',
