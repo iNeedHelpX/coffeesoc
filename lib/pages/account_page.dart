@@ -23,9 +23,11 @@ class _AccountPageState extends State<AccountPage> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
-                  GestureDetector(
+
+                  InkWell(
+                    splashColor: tabicon,
                     onTap: () {
                       bottomSheet(context);
                     },
@@ -42,6 +44,9 @@ class _AccountPageState extends State<AccountPage> {
                         ),
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 40,
                   ),
                   CustomButton(
                       text: "Logout",
