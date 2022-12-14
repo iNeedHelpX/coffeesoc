@@ -3,6 +3,7 @@ import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/widgets/custom_button.dart';
 import 'package:coffeesoc/pages/widgets/settings_card.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AccountPage extends StatefulWidget {
@@ -36,7 +37,27 @@ class _AccountPageState extends State<AccountPage> {
                   SizedBox(
                     height: 10,
                   ),
-                  SettingsCard(
+                  InkWell(
+                    splashColor: containerback,
+                    onTap: () {
+                      //do something
+                      Get.snackbar(
+                        "test",
+                        "this is a test",
+                        duration: Duration(seconds: 1),
+                      );
+                    },
+                    child: SettingCards(
+                      titleText: 'test',
+                      subText: 'text',
+                      icon: Icon(
+                        Icons.dirty_lens,
+                        size: 40,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  QRCard(
                     titleText: 'Coming soon! Pay with QR code',
                     subText: 'coming soon',
                   ),
