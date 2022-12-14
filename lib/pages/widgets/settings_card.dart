@@ -5,8 +5,12 @@ import 'package:flutter/material.dart';
 class SettingsCard extends StatelessWidget {
   final String titleText;
   final String subText;
-  const SettingsCard(
-      {super.key, required this.titleText, required this.subText});
+
+  const SettingsCard({
+    super.key,
+    required this.titleText,
+    required this.subText,
+  });
 
   @override
   Widget build(BuildContext context) {
