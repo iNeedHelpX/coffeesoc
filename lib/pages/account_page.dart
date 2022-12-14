@@ -1,6 +1,7 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/widgets/custom_button.dart';
+import 'package:coffeesoc/start/bottomsheet.dart';
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatefulWidget {
@@ -23,6 +24,24 @@ class _AccountPageState extends State<AccountPage> {
                 children: [
                   SizedBox(
                     height: 30,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      bottomSheet(context);
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: ListTile(
+                        tileColor: prettyPurple,
+                        title: Text('QR card'),
+                        subtitle: Text("pay with qrcode"),
+                        leading: Icon(
+                          Icons.qr_code_scanner,
+                          size: 40,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   ),
                   CustomButton(
                       text: "Logout",
