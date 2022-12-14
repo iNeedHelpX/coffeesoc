@@ -32,7 +32,7 @@ class _AccountPageState extends State<AccountPage> {
                     style: GoogleFonts.courgette(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
-                        color: Colors.black),
+                        color: Color.fromARGB(255, 93, 92, 103)),
                   ),
                   SizedBox(
                     height: 10,
@@ -79,6 +79,26 @@ class _AccountPageState extends State<AccountPage> {
                       ),
                       titleText: 'Credit card',
                       subText: 'add/view your credit card info',
+                    ),
+                  ),
+                  InkWell(
+                    splashColor: containerback,
+                    onTap: () {
+                      //do something
+                      Get.snackbar(
+                        "test",
+                        "this is a test",
+                        duration: Duration(seconds: 1),
+                      );
+                    },
+                    child: SettingCards(
+                      icon: Icon(
+                        Icons.history,
+                        size: 40,
+                        color: Colors.black,
+                      ),
+                      titleText: 'Order History',
+                      subText: 'view order history',
                     ),
                   ),
 
