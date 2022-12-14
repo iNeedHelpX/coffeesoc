@@ -34,7 +34,7 @@ class _AccountPageState extends State<AccountPage> {
                         color: Colors.black),
                   ),
                   SettingsCard(
-                    titleText: 'Coming soon Pay with QR code',
+                    titleText: 'Coming soon! Pay with QR code',
                     subText: 'coming soon',
                   ),
 
