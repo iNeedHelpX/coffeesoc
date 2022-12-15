@@ -62,7 +62,9 @@ class SettingCards extends StatelessWidget {
       elevation: 5,
       child: ListTile(
         tileColor: prettyPurple,
-        title: Text(titleText),
+        title: Text(
+          titleText,
+        ),
         subtitle: Text(subText),
         leading: icon,
         trailing: Icon(
