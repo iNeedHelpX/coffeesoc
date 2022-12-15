@@ -41,26 +41,21 @@ class _AccountPageState extends State<AccountPage> {
                     splashColor: containerback,
                     onTap: () {
                       //do something
-                      Get.snackbar(
-                        "test",
-                        "this is a test",
-                        duration: Duration(seconds: 1),
-                      );
+                      Get.snackbar("test", "this is a test",
+                          duration: Duration(seconds: 1),
+                          backgroundColor: Color.fromARGB(255, 255, 0, 136));
                     },
                     child: SettingCards(
-                      titleText: 'test',
-                      subText: 'text',
                       icon: Icon(
-                        Icons.dirty_lens,
+                        Icons.curtains,
                         size: 40,
                         color: Colors.black,
                       ),
+                      titleText: 'Test',
+                      subText: 'change later Julia!',
                     ),
                   ),
-                  QRCard(
-                    titleText: 'Coming soon! Pay with QR code',
-                    subText: 'coming soon',
-                  ),
+
                   InkWell(
                     splashColor: containerback,
                     onTap: () {
