@@ -2,6 +2,7 @@ import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/pages/widgets/custom_button.dart';
 import 'package:coffeesoc/pages/widgets/settings_card.dart';
+import 'package:coffeesoc/start/bottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -55,7 +56,25 @@ class _AccountPageState extends State<AccountPage> {
                       subText: 'change later Julia!',
                     ),
                   ),
-
+                  InkWell(
+                    splashColor: containerback,
+                    onTap: () {
+                      //do something
+                      bottomSheet(context);
+                      Get.snackbar("Pay with Qr coming soon!", "coming soon",
+                          duration: Duration(seconds: 5),
+                          backgroundColor: textturq);
+                    },
+                    child: SettingCards(
+                      icon: Icon(
+                        Icons.qr_code_scanner_rounded,
+                        size: 40,
+                        color: Colors.black,
+                      ),
+                      titleText: 'Coming Soon! Pay with QR Code',
+                      subText: 'coming soon',
+                    ),
+                  ),
                   InkWell(
                     splashColor: containerback,
                     onTap: () {
