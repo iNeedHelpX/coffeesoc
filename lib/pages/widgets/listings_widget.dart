@@ -61,6 +61,8 @@ class CoffeeListingWidget extends StatelessWidget {
         Get.to(
           () => DetailsPage2(
             imgUrl: product!.image!,
+            name: product!.name!,
+            address: product!.address!,
             // name: product!.name!,
           ),
         );
