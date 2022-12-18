@@ -17,7 +17,7 @@ class DetailsPage2 extends StatelessWidget {
             right: 0,
             child: Container(
               width: double.maxFinite,
-              height: 350,
+              height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
