@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:rapyd/rapyd.dart';
 
-var scaffoldKey = GlobalKey<ScaffoldState>();
+// var scaffoldKey = GlobalKey<ScaffoldState>();
 //firebase stuff
 final Future<FirebaseApp> initialization = Firebase.initializeApp();
 FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;

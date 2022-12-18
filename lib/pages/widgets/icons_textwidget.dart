@@ -27,7 +27,8 @@ class IconAndText extends StatelessWidget {
         Text(
           text,
           textAlign: TextAlign.left,
-          style: GoogleFonts.karla(fontSize: 14, color: color),
+          style: GoogleFonts.karla(
+              fontSize: 14, color: color, fontWeight: FontWeight.w800),
         ),
       ],
     );
