@@ -27,8 +27,8 @@ class DetailsPage2 extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 20,
-            right: 20,
+            left: 10,
+            right: 10,
             child: Row(
               children: [backButton()],
             ),
