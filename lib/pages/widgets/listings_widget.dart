@@ -1,7 +1,7 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/controllers/shop_controller.dart';
 import 'package:coffeesoc/models/coffeeshop_model.dart';
-import 'package:coffeesoc/pages/Sub_pages/details_pg.dart';
+import 'package:coffeesoc/pages/Sub_pages/details_pg2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -58,10 +58,12 @@ class CoffeeListingWidget extends StatelessWidget {
       onTap: () {
         // this is where you put the get.to the details page
         //looks like this:
-        Get.to(() => DetailsView(
-              imgUrl: product!.image!,
-              name: product!.name!,
-            ));
+        Get.to(
+          () => DetailsPage2(
+            imgUrl: product!.image!,
+            // name: product!.name!,
+          ),
+        );
       },
       child: Container(
         margin: EdgeInsets.fromLTRB(15, 5, 15, 15),
