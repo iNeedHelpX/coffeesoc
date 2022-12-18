@@ -6,8 +6,6 @@ import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../controllers/shop_controller.dart';
-
 class DetailsPage2 extends StatelessWidget {
   final String imgUrl;
   final String name;
@@ -113,11 +111,17 @@ class DetailsPage2 extends StatelessWidget {
                             text: "Add to favorite",
                             color: Colors.black,
                             icnColor: Color.fromARGB(255, 252, 6, 92)),
-                        IconAndText(
-                            icn: Icons.pin_drop,
-                            text: "GoogleMaps",
-                            color: tabicon,
-                            icnColor: Color.fromARGB(255, 11, 144, 49)),
+                        InkWell(
+                          splashColor: containerback,
+                          onTap: () {
+                            Get.snackbar("Googlemap", "Opening maps");
+                          },
+                          child: IconAndText(
+                              icn: Icons.pin_drop,
+                              text: "GoogleMaps",
+                              color: tabicon,
+                              icnColor: Color.fromARGB(255, 11, 144, 49)),
+                        ),
                       ],
                     ),
                     Text(
