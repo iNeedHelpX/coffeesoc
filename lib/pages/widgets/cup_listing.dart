@@ -2,7 +2,6 @@ import 'package:coffeesoc/controllers/cupinfo_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/models/cup_model.dart';
 import 'package:coffeesoc/models/user_model.dart';
-import 'package:coffeesoc/start/bottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';

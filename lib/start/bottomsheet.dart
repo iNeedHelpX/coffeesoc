@@ -1,5 +1,4 @@
 import 'package:coffeesoc/colors/colours_list.dart';
-import 'package:coffeesoc/colors/radial_gradient.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 import 'package:google_fonts/google_fonts.dart';

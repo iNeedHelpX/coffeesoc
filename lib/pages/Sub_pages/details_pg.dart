@@ -1,7 +1,6 @@
 import 'package:coffeesoc/colors/colours_list.dart';
 import 'package:coffeesoc/pages/widgets/back_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class DetailsView extends StatelessWidget {
   //the return types required when you call detailsview

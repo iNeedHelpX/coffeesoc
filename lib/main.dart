@@ -1,11 +1,9 @@
-import 'package:coffeesoc/config/config.dart';
 import 'package:coffeesoc/controllers/rapyd_payment.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:coffeesoc/controllers/login_controller.dart';
 import 'package:coffeesoc/globalvars.dart';
 import 'package:coffeesoc/start/start.dart';
-import 'package:rapyd/rapyd.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
